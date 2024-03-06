@@ -1,0 +1,595 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="APIChecker_CacheEntryNotFound" xml:space="preserve">
+    <value>ไม่พบรายการแคช</value>
+  </data>
+  <data name="APIChecker_ConnectFailure" xml:space="preserve">
+    <value>เชื่อมต่อล้มเหลว</value>
+  </data>
+  <data name="APIChecker_ConnectionClosed" xml:space="preserve">
+    <value>การเชื่อมต่อปิดแล้ว</value>
+  </data>
+  <data name="APIChecker_ConnectionTimeOut" xml:space="preserve">
+    <value>หมดเวลาการเชื่อมต่อ</value>
+  </data>
+  <data name="APIChecker_GetWayTimeOut" xml:space="preserve">
+    <value>หมดเวลาสื่อการกับ Getway</value>
+  </data>
+  <data name="APIChecker_InvaildSSL" xml:space="preserve">
+    <value>SSL ไม่ถูกต้อง</value>
+  </data>
+  <data name="APIChecker_KeepAliveFailure" xml:space="preserve">
+    <value>เกิดปัญหาในการเชื่อมต่อ</value>
+  </data>
+  <data name="APIChecker_MessageLengthLimitExceeded" xml:space="preserve">
+    <value>ข้อความมีความยาวมากกว่าที่จำกัดไว้</value>
+  </data>
+  <data name="APIChecker_NameResolutionFailure" xml:space="preserve">
+    <value>รายละเอียดของชื่อมีความผิดพลาด</value>
+  </data>
+  <data name="APIChecker_NotFound" xml:space="preserve">
+    <value>ไม่พบสิ่งใด</value>
+  </data>
+  <data name="APIChecker_Null" xml:space="preserve">
+    <value>URL ไม่ถูกกำหนดไว้</value>
+  </data>
+  <data name="APIChecker_Offline" xml:space="preserve">
+    <value>ออฟไลน์</value>
+  </data>
+  <data name="APIChecker_Online" xml:space="preserve">
+    <value>ออนไลน์</value>
+  </data>
+  <data name="APIChecker_OriginUnreachable" xml:space="preserve">
+    <value>ที่มาไม่สามารถเข้าถึงได้</value>
+  </data>
+  <data name="APIChecker_Pending" xml:space="preserve">
+    <value>รอดำเนินการ</value>
+  </data>
+  <data name="APIChecker_PipelineFailure" xml:space="preserve">
+    <value>Pipeline ล้มเหลว</value>
+  </data>
+  <data name="APIChecker_ProxyNameResolutionFailure" xml:space="preserve">
+    <value>การแก้ปัญหาชื่อพร็อกซีล้มเหลว</value>
+  </data>
+  <data name="APIChecker_ReceiveFailure" xml:space="preserve">
+    <value>ตรวจพบปัญหาทางฝั่งเซิฟเวอร์</value>
+  </data>
+  <data name="APIChecker_RequestCanceled" xml:space="preserve">
+    <value>คำขอถูกยกเลิก</value>
+  </data>
+  <data name="APIChecker_RequestProhibitedByCachePolicy" xml:space="preserve">
+    <value>คำขอถูกห้ามโดยนโยบายแคช</value>
+  </data>
+  <data name="APIChecker_SecureChannelFailure" xml:space="preserve">
+    <value>ความล้มเหลวของช่องทางที่ปลอดภัย</value>
+  </data>
+  <data name="APIChecker_SendFailure" xml:space="preserve">
+    <value>ส่งข้อมูลล้มเหลว</value>
+  </data>
+  <data name="APIChecker_ServerError" xml:space="preserve">
+    <value>เซิร์ฟเวอร์ผิดพลาด</value>
+  </data>
+  <data name="APIChecker_ServerOverloaded" xml:space="preserve">
+    <value>เซิร์ฟเวอร์มีอาการโอเวอร์โหลด</value>
+  </data>
+  <data name="APIChecker_ServerProtocolViolation" xml:space="preserve">
+    <value>การละเมิดโปรโตคอลเซิร์ฟเวอร์</value>
+  </data>
+  <data name="APIChecker_ServerUnavailable" xml:space="preserve">
+    <value>เซิร์ฟเวอร์ไม่พร้อมใช้งาน</value>
+  </data>
+  <data name="APIChecker_SSLFailed" xml:space="preserve">
+    <value>SSL ล้มเหลว</value>
+  </data>
+  <data name="APIChecker_Success" xml:space="preserve">
+    <value>สำเร็จ</value>
+  </data>
+  <data name="APIChecker_Timeout" xml:space="preserve">
+    <value>หมดเวลา</value>
+  </data>
+  <data name="APIChecker_TrustFailure" xml:space="preserve">
+    <value>การตรวจสอบ Trust ล้มเหลว</value>
+  </data>
+  <data name="APIChecker_Unknown" xml:space="preserve">
+    <value>ข้อผิดพลาดที่ไม่รู้จัก</value>
+  </data>
+  <data name="APIChecker_UnknownStatusCode" xml:space="preserve">
+    <value>ไม่รู้จัก Status Code ชุดนี้</value>
+  </data>
+  <data name="Application_Exception_Thread" xml:space="preserve">
+    <value>ตัว Launcher ปิดเนื่องจากพบปัญหาของเธรด</value>
+  </data>
+  <data name="Application_Exception_Unhandled" xml:space="preserve">
+    <value>ตัว Launcher ปิดเนื่องจากพบปัญหาที่ไม่สามารถจัดการได้</value>
+  </data>
+  <data name="Global_Text_About" xml:space="preserve">
+    <value>เกี่ยวกับ</value>
+  </data>
+  <data name="Global_Text_EG_1" xml:space="preserve">
+    <value>ยกเลิกการใช้งาน</value>
+  </data>
+  <data name="KitEnabler_Beta" xml:space="preserve">
+    <value>BETA Build Date</value>
+  </data>
+  <data name="KitEnabler_Dev" xml:space="preserve">
+    <value>DEV Build Date</value>
+  </data>
+  <data name="KitEnabler_Public" xml:space="preserve">
+    <value>Build Date</value>
+  </data>
+  <data name="LauncherUpdateCheck_FS" xml:space="preserve">
+    <value>เข้า Github ผ่านเว็ปเบราว์เซอร์ เพื่อดาวน์โหลด Game Launcher เวอร์ชั่นใหม่</value>
+  </data>
+  <data name="LauncherUpdateCheck_VS_Insider" xml:space="preserve">
+    <value>สถานะ Launcher:</value>
+  </data>
+  <data name="LauncherUpdateCheck_VS_Insider_Beta" xml:space="preserve">
+    <value>รุ่นทดสอบ</value>
+  </data>
+  <data name="LauncherUpdateCheck_VS_Insider_Dev" xml:space="preserve">
+    <value>ผู้พัฒนา</value>
+  </data>
+  <data name="LauncherUpdateCheck_VS_Insider_Text_Build" xml:space="preserve">
+    <value>สร้าง</value>
+  </data>
+  <data name="LauncherUpdateCheck_VS_Insider_Text_Current" xml:space="preserve">
+    <value>ปัจจุบัน:</value>
+  </data>
+  <data name="LauncherUpdateCheck_VS_Insider_Text_Stable" xml:space="preserve">
+    <value>เสถียร:</value>
+  </data>
+  <data name="LauncherUpdateCheck_VS_Insider_Unofficial" xml:space="preserve">
+    <value>ไม่เป็นทางการ</value>
+  </data>
+  <data name="LauncherUpdateCheck_VS_Text_Invalid_Error" xml:space="preserve">
+    <value>สถานะ Launcher:\n- API Version Error</value>
+  </data>
+  <data name="LauncherUpdateCheck_VS_Text_Invalid_JSON" xml:space="preserve">
+    <value>สถานะ Launcher:\n- Invalid JSON</value>
+  </data>
+  <data name="LauncherUpdateCheck_VS_Text_No_Update" xml:space="preserve">
+    <value>สถานะ Launcher:\n- เวอร์ชั่นล่าสุด</value>
+  </data>
+  <data name="LauncherUpdateCheck_VS_Text_Update" xml:space="preserve">
+    <value>สถานะ Launcher:\n- Update Available</value>
+  </data>
+  <data name="LauncherUpdateCheck_VS_Text_Update_New" xml:space="preserve">
+    <value>ล่าสุด:</value>
+  </data>
+  <data name="LauncherUpdateCheck_VS_Text_Version" xml:space="preserve">
+    <value>เวอร์ชั่น:</value>
+  </data>
+  <data name="MainScreen_Button_Forgot_Password" xml:space="preserve">
+    <value>ลืมรหัสผ่านไหม?</value>
+    <comment>Used to Display Forgot Password Text [Default Text]</comment>
+  </data>
+  <data name="MainScreen_Button_Launch" xml:space="preserve">
+    <value>Launcher</value>
+  </data>
+  <data name="MainScreen_Button_Login" xml:space="preserve">
+    <value>เข้าสู่ระบบ</value>
+    <comment>Used to Display on Button</comment>
+  </data>
+  <data name="MainScreen_Button_Play" xml:space="preserve">
+    <value>เล่นทันที</value>
+    <comment>Used to Display on Button</comment>
+  </data>
+  <data name="MainScreen_Button_Register" xml:space="preserve">
+    <value>ลงทะเบียน</value>
+    <comment>Used to Display on Button</comment>
+  </data>
+  <data name="MainScreen_Button_SelectServer" xml:space="preserve">
+    <value>เลือกเซิฟเวอร์</value>
+    <comment>Used to Display Button Text [Hard Coded Text]</comment>
+  </data>
+  <data name="MainScreen_Context_Close" xml:space="preserve">
+    <value>ปิด Launhcer</value>
+  </data>
+  <data name="MainScreen_Notification_Text_Alert" xml:space="preserve">
+    <value>เกมกำลังจะปิดตัวลงใน 5 นาที\nโปรดรีสตาร์ทด้วยตนเองก่อนที่ Launcher จะดำเนินการ</value>
+  </data>
+  <data name="MainScreen_Notification_Text_Restart" xml:space="preserve">
+    <value>บังคับรีสตาร์ท -</value>
+  </data>
+  <data name="MainScreen_TextBox_GameFiles_Downloading" xml:space="preserve">
+    <value>โปรดรอในขณะที่ Launcher ยังคงดาวน์โหลดไฟล์เกมอยู่</value>
+  </data>
+  <data name="MainScreen_TextBox_GameFiles_Invalid_Location" xml:space="preserve">
+    <value>ไม่พบไดรฟ์ {0}\nไดเร็กทอรีการติดตั้งจริงของคุณถูกตั้งค่าเป็น {1} ในขณะนี้</value>
+  </data>
+  <data name="MainScreen_TextBox_SettingsScreen_Error" xml:space="preserve">
+    <value>หน้าจอการตั้งค่าพบข้อผิดพลาด</value>
+  </data>
+  <data name="MainScreen_Text_AccountLink_Discord" xml:space="preserve">
+    <value>เชิญเช้า Discord</value>
+    <comment>[Hard Coded Text]</comment>
+  </data>
+  <data name="MainScreen_Text_AccountLink_Facebook" xml:space="preserve">
+    <value>กลุ่ม Facebook</value>
+    <comment>[Hard Coded Text]</comment>
+  </data>
+  <data name="MainScreen_Text_AccountLink_Home" xml:space="preserve">
+    <value>หน้าเว็ปหลัก</value>
+    <comment>[Hard Coded Text]</comment>
+  </data>
+  <data name="MainScreen_Text_AccountLink_Twitter" xml:space="preserve">
+    <value>แพลตฟอม X</value>
+    <comment>[Hard Coded Text]</comment>
+  </data>
+  <data name="MainScreen_Text_API_Launcher" xml:space="preserve">
+    <value>Main API\n- Pinging</value>
+    <comment>Used to Display API Status [Default Text]</comment>
+  </data>
+  <data name="MainScreen_Text_API_Launcher_Description_Offline" xml:space="preserve">
+    <value>Launcher ออฟไลน์</value>
+  </data>
+  <data name="MainScreen_Text_API_Launcher_Description_Online" xml:space="preserve">
+    <value>เชื่อมต่อกับ API</value>
+  </data>
+  <data name="MainScreen_Text_API_Server" xml:space="preserve">
+    <value>ผู้เล่นออนไลน์: ###\nผู้ลงทะเบียน: ###</value>
+    <comment>Used to Display Server Player Data [Place Holder Text]</comment>
+  </data>
+  <data name="MainScreen_Text_FS_Launcher_Status_Linux" xml:space="preserve">
+    <value>สถานะ Launcher:\n- สร้างโดย Linux</value>
+    <comment>[FS -&gt; Failsafe]</comment>
+  </data>
+  <data name="MainScreen_Text_FS_Login_Greeting" xml:space="preserve">
+    <value>ยินดีต้อนรับ</value>
+  </data>
+  <data name="MainScreen_Text_Launcher_Status" xml:space="preserve">
+    <value>Launcher\n- กำลังตรวจสอบ</value>
+  </data>
+  <data name="MainScreen_Text_Launcher_Version" xml:space="preserve">
+    <value>เวอร์ชั่น: v</value>
+  </data>
+  <data name="MainScreen_Text_Login" xml:space="preserve">
+    <value>ป้อนข้อมูลบัญชีของคุณเพื่อเข้าสู่ระบบ</value>
+  </data>
+  <data name="MainScreen_Text_Login_Greeting_Afternoon" xml:space="preserve">
+    <value>การซิ่งรถยามบ่ายก็น่าสนใจดีนะ</value>
+  </data>
+  <data name="MainScreen_Text_Login_Greeting_Evening" xml:space="preserve">
+    <value>ช่วงนี้แหละ เหมาะกับการซิ่งเลยนะ</value>
+  </data>
+  <data name="MainScreen_Text_Login_Greeting_Morning" xml:space="preserve">
+    <value>เช้าๆแบบนี้ต้องออกไปซิ่งเพื่อยืดเส้นยืดสายสักหน่อยนะ</value>
+  </data>
+  <data name="MainScreen_Text_Login_Greeting_YouNeedSleep" xml:space="preserve">
+    <value>ว่าไงเพื่อน ดึกๆแบบนี้จะไปไหนล่ะ</value>
+  </data>
+  <data name="MainScreen_Text_PH_InsiderBuildNumber" xml:space="preserve">
+    <value>ข้อมูล Build Date: ##-##-##-X</value>
+    <comment>Used to Display Build Date for Insider Builds [Default Text]</comment>
+  </data>
+  <data name="MainScreen_Text_PH_Launcher_Version" xml:space="preserve">
+    <value>เวอร์ชั่น: vX.X.X.X</value>
+    <comment>[PH -&gt; Place Holder]</comment>
+  </data>
+  <data name="MainScreen_Text_PH_SceneryGroup_Default" xml:space="preserve">
+    <value>Scenery: ธีมวันหยุด</value>
+    <comment>Scenery Holiday Text [Place Holder Text]</comment>
+  </data>
+  <data name="MainScreen_Text_PlayProgress" xml:space="preserve">
+    <value>โปรดรอ...</value>
+    <comment>Used to Display Download Progress Message Status [Default Text]</comment>
+  </data>
+  <data name="MainScreen_Text_Protection_Email" xml:space="preserve">
+    <value>อีเมลถูกซ่อนไว้</value>
+    <comment>[Hard Coded Text]</comment>
+  </data>
+  <data name="MainScreen_Text_SceneryGroup_Christmas" xml:space="preserve">
+    <value>Scenery: ธีมคริสมัส</value>
+    <comment>Scenery Holiday Text</comment>
+  </data>
+  <data name="MainScreen_Text_SceneryGroup_EG_1" xml:space="preserve">
+    <value>แต่นี่มัน ฉันเอง!</value>
+  </data>
+  <data name="MainScreen_Text_SceneryGroup_Halloween" xml:space="preserve">
+    <value>Scenery: ธีม Halloween</value>
+    <comment>Scenery Holiday Text</comment>
+  </data>
+  <data name="MainScreen_Text_SceneryGroup_NewYears" xml:space="preserve">
+    <value>Scenery: ธีมปีใหม่</value>
+    <comment>Scenery Holiday Text</comment>
+  </data>
+  <data name="MainScreen_Text_SceneryGroup_Normal" xml:space="preserve">
+    <value>Scenery: ธีมปกติ</value>
+    <comment>Scenery Holiday Text</comment>
+  </data>
+  <data name="MainScreen_Text_SceneryGroup_Oktoberfest" xml:space="preserve">
+    <value>Scenery: ธีม Oktoberfest</value>
+    <comment>Scenery Holiday Text</comment>
+  </data>
+  <data name="MainScreen_Text_SceneryGroup_Valentines" xml:space="preserve">
+    <value>Scenery: ธีมวาเลนไทน์</value>
+    <comment>Scenery Holiday Text</comment>
+  </data>
+  <data name="MainScreen_Text_ServerPingStatus" xml:space="preserve">
+    <value>ปิงไปที่เซิร์ฟเวอร์</value>
+    <comment>Used to Display Server Ping (If Supported) [Default Text]</comment>
+  </data>
+  <data name="MainScreen_Text_ServerShutDown" xml:space="preserve">
+    <value>ระยะเวลาที่เล่น:</value>
+    <comment>Used to Display Force Restart Timer on Panel [Default Text]</comment>
+  </data>
+  <data name="MainScreen_Text_ServerShutDown_EG_1" xml:space="preserve">
+    <value>Game Launcher!</value>
+  </data>
+  <data name="MainScreen_Text_ServerStatus_Checking" xml:space="preserve">
+    <value>สถานะเซิร์ฟเวอร์:\n - Pinging</value>
+  </data>
+  <data name="MainScreen_Text_ServerStatus_Description_Cancelled" xml:space="preserve">
+    <value>ล้มเหลวในการเชื่อมต่อกับเซิร์ฟเวอร์</value>
+  </data>
+  <data name="MainScreen_Text_ServerStatus_Description_Offline" xml:space="preserve">
+    <value>ดูเหมือนว่าเซิร์ฟเวอร์จะออฟไลน์</value>
+  </data>
+  <data name="MainScreen_Text_ServerStatus_Description_Online" xml:space="preserve">
+    <value>ออนไลน์: {0}\n ลงทะเบียน: {1}</value>
+  </data>
+  <data name="MainScreen_Text_ServerStatus_Description_Unstable" xml:space="preserve">
+    <value>ได้รับข้อมูลจากเซิร์ฟเวอร์เกมที่ไม่ถูกต้อง</value>
+  </data>
+  <data name="MainScreen_Text_ServerStatus_Offline" xml:space="preserve">
+    <value>สถานะเซิร์ฟเวอร์:\n - ออฟไลน์</value>
+  </data>
+  <data name="MainScreen_Text_ServerStatus_Online" xml:space="preserve">
+    <value>สถานะเซิร์ฟเวอร์:\n - ออนไลน์</value>
+  </data>
+  <data name="MainScreen_Text_ServerStatus_Unknown" xml:space="preserve">
+    <value>Launcher ออฟไลน์:\n - ไม่ทราบข้อมูล</value>
+  </data>
+  <data name="MainScreen_Text_ServerStatus_Unstable" xml:space="preserve">
+    <value>การเชื่อมต่อเซิร์ฟเวอร์:\n - ไม่เสถียร</value>
+  </data>
+  <data name="Program_TextBox_File_Invalid" xml:space="preserve">
+    <value>ไฟล์ไม่ถูกต้อง</value>
+  </data>
+  <data name="Program_TextBox_File_Invalid_CPU" xml:space="preserve">
+    <value>ไม่รองรับ CPU ที่คุณใช้</value>
+  </data>
+  <data name="Program_TextBox_File_Invalid_Start" xml:space="preserve">
+    <value>ไม่สามารถเริ่ม Launcher ได้\nไฟล์ต่อไปนี้ไม่ถูกต้อง:\n\n</value>
+  </data>
+  <data name="Program_TextBox_File_Invalid_Version" xml:space="preserve">
+    <value>เวอร์ชันไม่ถูกต้อง</value>
+  </data>
+  <data name="Program_TextBox_File_NotFound" xml:space="preserve">
+    <value>ไม่พบไฟล์</value>
+  </data>
+  <data name="Program_TextBox_Folder_Check_Launcher" xml:space="preserve">
+    <value>ไม่อนุญาตให้ใช้ Launcher ที่อยู่ใน Location นี้</value>
+  </data>
+  <data name="Program_TextBox_Folder_Check_Launcher_P2" xml:space="preserve">
+    <value>ไม่อนุญาตให้ใช้ Location นี้:</value>
+  </data>
+  <data name="Program_TextBox_Folder_Check_Launcher_P3" xml:space="preserve">
+    <value>(ตำแหน่งของโฟลเดอร์ต้องอยู่ในไดรฟ์ เช่น C:\\ หรือ D:\\)</value>
+  </data>
+  <data name="Program_TextBox_Folder_Check_Launcher_P4" xml:space="preserve">
+    <value>(Includes 'Desktop', 'Documents', 'Downloads')</value>
+  </data>
+  <data name="Program_TextBox_Folder_Check_Launcher_P5" xml:space="preserve">
+    <value>ให้ย้ายโฟลเดอร์ Launcher ไปที่อื่นแทน เช่น:</value>
+  </data>
+  <data name="Program_TextBox_Folder_Check_Launcher_P6" xml:space="preserve">
+    <value>หรือ</value>
+  </data>
+  <data name="Program_TextBox_Folder_Check_Launcher_P7" xml:space="preserve">
+    <value>(หรือตำแหน่งไดรฟ์ของ NTFS อื่น ๆ เช่น 'D:')</value>
+  </data>
+  <data name="Program_TextBox_Folder_Write_Test" xml:space="preserve">
+    <value>ไม่สามารถทำการทดสอบการเขียนไปยังโฟลเดอร์ที่มี Launcher ได้\nเนื่องจากไม่มีสิทธิ์การใช้งาน</value>
+  </data>
+  <data name="Program_TextBox_GameIsRunning" xml:space="preserve">
+    <value>ขณะนี้ Need for Speed: World กำลังทำงานอยู่</value>
+  </data>
+  <data name="Program_TextBox_LZMA_Redownloaded" xml:space="preserve">
+    <value>ดาวน์โหลดไฟล์ LZMA.dll ที่หายไป\nกรุณารีสตาร์ท Launcher ขอบคุณ!</value>
+  </data>
+  <data name="Program_TextBox_NetFrame_P1" xml:space="preserve">
+    <value>แอปพลิเคชันนี้ต้องการเวอร์ชันขั้นต่ำของ .NET Framework:\n</value>
+  </data>
+  <data name="Program_TextBox_NetFrame_P2" xml:space="preserve">
+    <value>คุณต้องการติดตั้ง .NET Framework เวอร์ชันนี้ทันทีหรือไม่</value>
+  </data>
+  <data name="Program_TextBox_NetFrame_P3" xml:space="preserve">
+    <value>ไม่สามารถเริ่มแอปพลิเคชันนี้ได้</value>
+  </data>
+  <data name="Program_TextBox_SBRWIsRunning" xml:space="preserve">
+    <value>ขณะนี้ Launcher กำลังทำงานอยู่</value>
+  </data>
+  <data name="Program_TextBox_SimplifiedIsRunning" xml:space="preserve">
+    <value>ขณะนี้ Simplified Launcher กำลังทำงานอยู่</value>
+  </data>
+  <data name="Program_TextBox_System_Detection" xml:space="preserve">
+    <value>Operating System ตรวจพบว่าระบบตรวจสอบมีข้อผิดพลาด</value>
+  </data>
+  <data name="Program_TextBox_W7_KB_P1" xml:space="preserve">
+    <value>สวัสดีคุณผู้ใช้ Windows 7:\nเราตรวจพบปัญหาที่อาจเกิดขึ้นจากการอัปเดตที่ขาดหายไปซึ่งอาจจำเป็น</value>
+  </data>
+  <data name="Program_TextBox_W7_KB_P2" xml:space="preserve">
+    <value>เราพบว่าแพ็คเกจ Windows Update เหล่านี้ไม่ได้ถูกติดตั้ง:</value>
+  </data>
+  <data name="Program_TextBox_W7_KB_P3" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="Program_TextBox_W7_KB_P4" xml:space="preserve">
+    <value>คุณสามารถกด 'OK' เพื่อดำเนินการต่อ และคุณจะไม่เห็นข้อความนี้อีก</value>
+  </data>
+  <data name="Program_TextBox_W7_TLS_P1" xml:space="preserve">
+    <value>หมายเหตุ: ไม่พบ Registry Key ต่อไปนี้:</value>
+  </data>
+  <data name="Program_TextBox_W7_TLS_P2" xml:space="preserve">
+    <value>ต้องมีการตั้งค่านี้เพื่อให้ Launcher ทำงานได้อย่างถูกต้อง!</value>
+  </data>
+  <data name="Program_TextBox_W7_TLS_P3" xml:space="preserve">
+    <value>การคลิก 'OK' จะพยายามเพิ่มการตั้งค่า Registry Key</value>
+  </data>
+  <data name="Program_TextBox_W7_TLS_P4" xml:space="preserve">
+    <value>การตั้งค่า Registry Key\n\nโปรดจำไว้ว่าการเปลี่ยนแปลงอาจต้องรีบูตระบบจึงจะมีผล</value>
+  </data>
+  <data name="Redistributable_VC_32" xml:space="preserve">
+    <value>คุณจะต้องติดตั้ง 32-bit 2015-2019 VC++ Redistributable Package (หรือใหม่กว่า)</value>
+  </data>
+  <data name="Redistributable_VC_64" xml:space="preserve">
+    <value>คุณจะต้องติดตั้ง 64-bit 2015-2019 VC++ Redistributable Package (หรือใหม่กว่า)</value>
+  </data>
+  <data name="Redistributable_VC_P10" xml:space="preserve">
+    <value>ล้มเหลวในการติดตั้งแพ็คเกจเสริม\nตัวเกมจะไม่ทำงาน</value>
+  </data>
+  <data name="Redistributable_VC_P2" xml:space="preserve">
+    <value>การติดตั้งนี้จะทำงานอยู่เบื้องหลัง</value>
+  </data>
+  <data name="Redistributable_VC_P3" xml:space="preserve">
+    <value>อาจจะต้องรีสตาร์คอมพิวเตอร์ของคุณ</value>
+  </data>
+  <data name="Redistributable_VC_P4" xml:space="preserve">
+    <value>คลิก OK เพื่อติดตั้ง</value>
+  </data>
+  <data name="Redistributable_VC_P5" xml:space="preserve">
+    <value>Compatibility</value>
+  </data>
+  <data name="Redistributable_VC_P6" xml:space="preserve">
+    <value>ล้มเหลวในการเรียกตัวติดตั้งแพ็คเกจเสริม\nตัวเกมจะไม่ทำงาน</value>
+  </data>
+  <data name="Redistributable_VC_P7" xml:space="preserve">
+    <value>ล้มเหลวในการเรียกตัวติดตั้งแพ็คเกจเสริม\n Exit Code ของตัวติดตั้ง</value>
+  </data>
+  <data name="Redistributable_VC_P8" xml:space="preserve">
+    <value>ไม่สามารถเริ่มเกมได้</value>
+  </data>
+  <data name="Redistributable_VC_P9" xml:space="preserve">
+    <value>ล้มเหลวในการเปิดตัวติดตั้งแพ็คเกจเสริม\nตัวเกมจะไม่ทำงาน</value>
+  </data>
+  <data name="VisualsAPIChecker_TextBox_No_API" xml:space="preserve">
+    <value>ไม่สามารถเชื่อมต่อกับเซิร์ฟเวอร์ได้\nโปรดตรวจสอบการเชื่อมต่อของคุณ\n\nคลิก Yes เพื่อปิด Launcher\n\nหรือ\n\nคลิก No เพื่อดำเนินการต่อ</value>
+  </data>
+  <data name="VisualsAPIChecker_TextBox_No_API_P2" xml:space="preserve">
+    <value>Launcher หยุดทำงานแล้ว ไม่สามารถเชื่อมต่อกับเซิร์ฟเวอร์ได้</value>
+  </data>
+  <data name="VisualsAPIChecker_TextBox_No_API_P3" xml:space="preserve">
+    <value>โปรดเก็บข้อมูลการทำงานที่ผิดพลาดของ Launcher นี้ไว้\nเพื่อที่จะได้นำไปใช้แก้ไขปัญหาในอนาคต</value>
+  </data>
+  <data name="VisualsAPIChecker_TextBox_No_API_P4" xml:space="preserve">
+    <value>Launcher จะยังคงดำเนินต่อไป แม้ว่าจะไม่สามารถเชื่อมต่อกับเซิร์ฟเวอร์ได้ก็ตาม</value>
+  </data>
+</root>
