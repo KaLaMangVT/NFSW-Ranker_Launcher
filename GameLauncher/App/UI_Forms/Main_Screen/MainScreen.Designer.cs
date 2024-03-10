@@ -55,7 +55,11 @@
             this.ShowPlayPanel = new System.Windows.Forms.Panel();
             this.InsiderBuildNumberText = new System.Windows.Forms.Label();
             this.ServerInfoPanel = new System.Windows.Forms.Panel();
+            this.HomePageIcon = new System.Windows.Forms.PictureBox();
+            this.DiscordIcon = new System.Windows.Forms.PictureBox();
+            this.FacebookIcon = new System.Windows.Forms.PictureBox();
             this.TwitterAccountLink = new System.Windows.Forms.LinkLabel();
+            this.TwitterIcon = new System.Windows.Forms.PictureBox();
             this.FacebookGroupLink = new System.Windows.Forms.LinkLabel();
             this.HomePageLink = new System.Windows.Forms.LinkLabel();
             this.DiscordInviteLink = new System.Windows.Forms.LinkLabel();
@@ -69,10 +73,6 @@
             this.logo = new System.Windows.Forms.PictureBox();
             this.SettingsButton = new System.Windows.Forms.PictureBox();
             this.CloseBTN = new System.Windows.Forms.PictureBox();
-            this.HomePageIcon = new System.Windows.Forms.PictureBox();
-            this.DiscordIcon = new System.Windows.Forms.PictureBox();
-            this.FacebookIcon = new System.Windows.Forms.PictureBox();
-            this.TwitterIcon = new System.Windows.Forms.PictureBox();
             this.LauncherIconStatus = new System.Windows.Forms.PictureBox();
             this.APIStatusIcon = new System.Windows.Forms.PictureBox();
             this.ServerStatusIcon = new System.Windows.Forms.PictureBox();
@@ -81,6 +81,10 @@
             this.Banner = new System.Windows.Forms.PictureBox();
             this.ShowPlayPanel.SuspendLayout();
             this.ServerInfoPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.HomePageIcon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DiscordIcon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FacebookIcon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TwitterIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MainEmailBorder)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MainPasswordBorder)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProgressBarOutline)).BeginInit();
@@ -88,10 +92,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SettingsButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CloseBTN)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.HomePageIcon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DiscordIcon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.FacebookIcon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TwitterIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LauncherIconStatus)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.APIStatusIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ServerStatusIcon)).BeginInit();
@@ -322,6 +322,27 @@
             this.ServerInfoPanel.ForeColor = System.Drawing.Color.Transparent;
             this.ServerInfoPanel.Name = "ServerInfoPanel";
             // 
+            // HomePageIcon
+            // 
+            this.HomePageIcon.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.HomePageIcon, "HomePageIcon");
+            this.HomePageIcon.Name = "HomePageIcon";
+            this.HomePageIcon.TabStop = false;
+            // 
+            // DiscordIcon
+            // 
+            this.DiscordIcon.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.DiscordIcon, "DiscordIcon");
+            this.DiscordIcon.Name = "DiscordIcon";
+            this.DiscordIcon.TabStop = false;
+            // 
+            // FacebookIcon
+            // 
+            this.FacebookIcon.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.FacebookIcon, "FacebookIcon");
+            this.FacebookIcon.Name = "FacebookIcon";
+            this.FacebookIcon.TabStop = false;
+            // 
             // TwitterAccountLink
             // 
             this.TwitterAccountLink.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -332,6 +353,13 @@
             this.TwitterAccountLink.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(179)))), ((int)(((byte)(189)))));
             this.TwitterAccountLink.Name = "TwitterAccountLink";
             this.TwitterAccountLink.TabStop = true;
+            // 
+            // TwitterIcon
+            // 
+            this.TwitterIcon.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.TwitterIcon, "TwitterIcon");
+            this.TwitterIcon.Name = "TwitterIcon";
+            this.TwitterIcon.TabStop = false;
             // 
             // FacebookGroupLink
             // 
@@ -432,34 +460,6 @@
             resources.ApplyResources(this.CloseBTN, "CloseBTN");
             this.CloseBTN.Name = "CloseBTN";
             this.CloseBTN.TabStop = false;
-            // 
-            // HomePageIcon
-            // 
-            this.HomePageIcon.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.HomePageIcon, "HomePageIcon");
-            this.HomePageIcon.Name = "HomePageIcon";
-            this.HomePageIcon.TabStop = false;
-            // 
-            // DiscordIcon
-            // 
-            this.DiscordIcon.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.DiscordIcon, "DiscordIcon");
-            this.DiscordIcon.Name = "DiscordIcon";
-            this.DiscordIcon.TabStop = false;
-            // 
-            // FacebookIcon
-            // 
-            this.FacebookIcon.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.FacebookIcon, "FacebookIcon");
-            this.FacebookIcon.Name = "FacebookIcon";
-            this.FacebookIcon.TabStop = false;
-            // 
-            // TwitterIcon
-            // 
-            this.TwitterIcon.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.TwitterIcon, "TwitterIcon");
-            this.TwitterIcon.Name = "TwitterIcon";
-            this.TwitterIcon.TabStop = false;
             // 
             // LauncherIconStatus
             // 
@@ -565,6 +565,10 @@
             this.TransparencyKey = System.Drawing.Color.Fuchsia;
             this.ShowPlayPanel.ResumeLayout(false);
             this.ServerInfoPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.HomePageIcon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DiscordIcon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FacebookIcon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TwitterIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MainEmailBorder)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MainPasswordBorder)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProgressBarOutline)).EndInit();
@@ -572,10 +576,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SettingsButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CloseBTN)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.HomePageIcon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DiscordIcon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.FacebookIcon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TwitterIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LauncherIconStatus)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.APIStatusIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ServerStatusIcon)).EndInit();

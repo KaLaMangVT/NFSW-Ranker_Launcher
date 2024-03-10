@@ -102,7 +102,7 @@ namespace GameLauncher.App.UI_Forms.Register_Screen
             this.RegisterAgree.Name = "RegisterAgree";
             this.RegisterAgree.Size = new System.Drawing.Size(232, 35);
             this.RegisterAgree.TabIndex = 16;
-            this.RegisterAgree.Text = "BY REGISTERING YOU AGREE TO FOLLOW SERVER RULES";
+            this.RegisterAgree.Text = "ฉันยอมรับเงื่อนไขในการแข่งรถทุกอย่าง ตามที่ระบุไว้ในข้อตกลงที่อยู่หน้าแรกของตัวเปิดเกม";
             this.RegisterAgree.UseVisualStyleBackColor = false;
             // 
             // RegisterButton
@@ -119,7 +119,7 @@ namespace GameLauncher.App.UI_Forms.Register_Screen
             this.RegisterButton.Name = "RegisterButton";
             this.RegisterButton.Size = new System.Drawing.Size(231, 35);
             this.RegisterButton.TabIndex = 17;
-            this.RegisterButton.Text = "REGISTER";
+            this.RegisterButton.Text = "สมัครเป็นนักแข่ง";
             this.RegisterButton.UseVisualStyleBackColor = false;
             // 
             // RegisterCancel
@@ -136,7 +136,7 @@ namespace GameLauncher.App.UI_Forms.Register_Screen
             this.RegisterCancel.Name = "RegisterCancel";
             this.RegisterCancel.Size = new System.Drawing.Size(231, 35);
             this.RegisterCancel.TabIndex = 18;
-            this.RegisterCancel.Text = "CANCEL";
+            this.RegisterCancel.Text = "ยกเลิก";
             this.RegisterCancel.UseVisualStyleBackColor = false;
             // 
             // CurrentWindowInfo
@@ -150,7 +150,7 @@ namespace GameLauncher.App.UI_Forms.Register_Screen
             this.CurrentWindowInfo.Name = "CurrentWindowInfo";
             this.CurrentWindowInfo.Size = new System.Drawing.Size(232, 60);
             this.CurrentWindowInfo.TabIndex = 142;
-            this.CurrentWindowInfo.Text = "REGISTER ON LOCAL HOST";
+            this.CurrentWindowInfo.Text = "สมัครเป็นนักแข่งของ";
             this.CurrentWindowInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.CurrentWindowInfo.UseCompatibleTextRendering = true;
             this.CurrentWindowInfo.UseMnemonic = false;

@@ -703,7 +703,7 @@ Online</value>
     <value>10</value>
   </data>
   <data name="RegisterText.Text" xml:space="preserve">
-    <value>REGISTER</value>
+    <value>สมัครเป็นนักแข่ง</value>
   </data>
   <data name="&gt;&gt;RegisterText.Name" xml:space="preserve">
     <value>RegisterText</value>
@@ -3722,9 +3722,6 @@ Online</value>
         IkWKFClSpEiRIkWKFClSpEiRIkWKFClSpEiRIkWKFClSpEiRIkWKFClSpEiRIkWKFClSpEiRIkWKFClS
         pEiRIsVG8P8DuG4mmZKJBOgAAAAASUVORK5CYII=
 </value>
-  </data>
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>

@@ -736,7 +736,7 @@ namespace GameLauncher.App.UI_Forms.Main_Screen
             {
                 _builtinserver = true;
                 LoginButton.BackgroundImage = Theming.GrayButton;
-                LoginButton.Text = "Launch".ToUpper();
+                LoginButton.Text = "เริ่มเกม";
                 LoginButton.ForeColor = Theming.FivithTextForeColor;
                 ServerInfoPanel.Visible = false;
             }
@@ -744,7 +744,7 @@ namespace GameLauncher.App.UI_Forms.Main_Screen
             {
                 _builtinserver = false;
                 LoginButton.BackgroundImage = Theming.GrayButton;
-                LoginButton.Text = "Login".ToUpper();
+                LoginButton.Text = "เข้าสู่ระบบ";
                 LoginButton.ForeColor = Theming.SixTextForeColor;
                 ServerInfoPanel.Visible = false;
             }

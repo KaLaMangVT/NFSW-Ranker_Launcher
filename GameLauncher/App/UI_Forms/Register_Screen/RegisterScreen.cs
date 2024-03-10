@@ -425,7 +425,7 @@ namespace GameLauncher.App.UI_Forms.Register_Screen
             /* Functions                     /
             /********************************/
 
-            CurrentWindowInfo.Text = "REGISTER ON \n" + ServerListUpdater.ServerName("Register").ToUpper();
+            CurrentWindowInfo.Text = "สมัครเป็นนักแข่งของ \n" + ServerListUpdater.ServerName("Register").ToUpper();
 
             try
             {
