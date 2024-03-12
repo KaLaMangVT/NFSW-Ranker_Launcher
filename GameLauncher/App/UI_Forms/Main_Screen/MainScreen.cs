@@ -2599,8 +2599,8 @@ namespace GameLauncher.App.UI_Forms.Main_Screen
                         ExtractingProgress.ProgressColor = Theming.ExtractingProgressColor;
                     }, this);
 
-                    PlayProgressTextTimer.SafeInvokeAction(() => PlayProgressTextTimer.Text = "Failsafe CDN Detected".ToUpper(), this);
-                    PlayProgressText.SafeInvokeAction(() => PlayProgressText.Text = "Please Choose a CDN from Settings Screen".ToUpper(), this);
+                    PlayProgressTextTimer.SafeInvokeAction(() => PlayProgressTextTimer.Text = "พบปัญหาการเชื่อมต่อกับ CDN".ToUpper(), this);
+                    PlayProgressText.SafeInvokeAction(() => PlayProgressText.Text = "ไม่สามารถโหลดไฟล์เกมจาก CDN ได้".ToUpper(), this);
 
                     TaskbarProgress.SetState(Handle, TaskbarProgress.TaskbarStates.Paused);
                     TaskbarProgress.SetValue(Handle, 100, 100);
@@ -2608,7 +2608,7 @@ namespace GameLauncher.App.UI_Forms.Main_Screen
                 else
                 {
                     _downloadStartTime = DateTime.Now;
-                    PlayProgressTextTimer.SafeInvokeAction(() => PlayProgressTextTimer.Text = "Downloading: Core GameFiles".ToUpper(), this);
+                    PlayProgressTextTimer.SafeInvokeAction(() => PlayProgressTextTimer.Text = "ดาวน์โหลด: ไฟล์เกมหลัก".ToUpper(), this);
                     Log.Info("DOWNLOAD: Getting Core Game Files");
                     _downloader.StartDownload(FileSettingsSave.CDN, string.Empty, FileSettingsSave.GameInstallation, false, false, 1130632198);
                 }
@@ -2637,7 +2637,7 @@ namespace GameLauncher.App.UI_Forms.Main_Screen
             {
                 _downloadStartTime = DateTime.Now;
                 PlayProgressTextTimer.SafeInvokeAction(() =>
-                PlayProgressTextTimer.Text = "Downloading: Tracks Data".ToUpper(), this);
+                PlayProgressTextTimer.Text = "ดาวน์โหลด: ข้อมูลสนามแข่ง".ToUpper(), this);
                 Log.Info("DOWNLOAD: Getting Tracks Folder");
                 _downloader.StartDownload(FileSettingsSave.CDN, "Tracks", FileSettingsSave.GameInstallation, false, false, 615494528);
             }
@@ -2716,7 +2716,7 @@ namespace GameLauncher.App.UI_Forms.Main_Screen
             {
                 _downloadStartTime = DateTime.Now;
                 PlayProgressTextTimer.SafeInvokeAction(() =>
-                PlayProgressTextTimer.Text = "Downloading: Language Audio".ToUpper(), this);
+                PlayProgressTextTimer.Text = "ดาวน์โหลด: เสียงพากย์ในเกม".ToUpper(), this);
                 Log.Info("DOWNLOAD: Getting Speech/Audio Files");
                 _downloader.StartDownload(FileSettingsSave.CDN, speechFile, FileSettingsSave.GameInstallation, false, false, speechSize);
             }
@@ -2893,7 +2893,7 @@ namespace GameLauncher.App.UI_Forms.Main_Screen
                 if (downloadCurrent < compressedLength)
                 {
                     PlayProgressText.SafeInvokeAction(() =>
-                    PlayProgressText.Text = String.Format("{0} of {1} ({3}%) — {2}", TimeConversions.FormatFileSize(downloadCurrent), TimeConversions.FormatFileSize(compressedLength), TimeConversions.EstimateFinishTime(downloadCurrent, compressedLength, _downloadStartTime), (int)(100 * downloadCurrent / compressedLength)).ToUpper(), this);
+                    PlayProgressText.Text = String.Format("{0} จาก {1} ({3}%) — {2}", TimeConversions.FormatFileSize(downloadCurrent), TimeConversions.FormatFileSize(compressedLength), TimeConversions.EstimateFinishTime(downloadCurrent, compressedLength, _downloadStartTime), (int)(100 * downloadCurrent / compressedLength)).ToUpper(), this);
                 }
             }
             catch { }
@@ -3013,7 +3013,7 @@ namespace GameLauncher.App.UI_Forms.Main_Screen
                 if (PlayProgress.Value == 100)
                 {
                     PlayProgressText.SafeInvokeAction(() =>
-                    PlayProgressText.Text = String.Format("{0} of {1} : ({3}%) — {2}", TimeConversions.FormatFileSize(currentCount), TimeConversions.FormatFileSize(allFilesCount), TimeConversions.EstimateFinishTime(currentCount, allFilesCount, _downloadStartTime), (int)(100 * currentCount / allFilesCount)).ToUpper(), this);
+                    PlayProgressText.Text = String.Format("{0} จาก {1} : ({3}%) — {2}", TimeConversions.FormatFileSize(currentCount), TimeConversions.FormatFileSize(allFilesCount), TimeConversions.EstimateFinishTime(currentCount, allFilesCount, _downloadStartTime), (int)(100 * currentCount / allFilesCount)).ToUpper(), this);
                 }
             }
             catch { }

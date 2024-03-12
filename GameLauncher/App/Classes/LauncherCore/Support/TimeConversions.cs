@@ -32,7 +32,7 @@ namespace GameLauncher.App.Classes.LauncherCore.Support
                 var num = current / (double)total;
                 if (num < 0.00185484899838312)
                 {
-                    return "Calculating";
+                    return "กำลังคำนวน";
                 }
 
                 var now = DateTime.Now - keyValue;
@@ -43,10 +43,10 @@ namespace GameLauncher.App.Classes.LauncherCore.Support
                 int rMinutes = Convert.ToInt32(timeSpan.Minutes.ToString()) + 1;
                 int rSeconds = Convert.ToInt32(timeSpan.Seconds.ToString()) + 1;
 
-                if (rDays > 1) return rDays.ToString() + " days remaining";
-                if (rHours > 1) return rHours.ToString() + " hours remaining";
-                if (rMinutes > 1) return rMinutes.ToString() + " minutes remaining";
-                if (rSeconds > 1) return rSeconds.ToString() + " seconds remaining";
+                if (rDays > 1) return rDays.ToString() + " วัน";
+                if (rHours > 1) return rHours.ToString() + " ชั่วโมง";
+                if (rMinutes > 1) return rMinutes.ToString() + " นาที";
+                if (rSeconds > 1) return rSeconds.ToString() + " วินาที";
 
                 return "Just now";
             }

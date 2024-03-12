@@ -529,30 +529,30 @@ namespace GameLauncher
                         Log.Checking("FOLDER LOCATION: Checking Launcher Folder Directory");
                         DiscordLauncherPresence.Status("Start Up", "Checking Launcher Folder Locations");
 
-                        switch (FunctionStatus.CheckFolder(Locations.LauncherFolder))
-                        {
-                            case FolderType.IsTempFolder:
-                            case FolderType.IsUsersFolders:
-                            case FolderType.IsProgramFilesFolder:
-                            case FolderType.IsWindowsFolder:
-                            case FolderType.IsRootFolder:
-                                String Constructed_Msg = String.Empty;
+                        //switch (FunctionStatus.CheckFolder(Locations.LauncherFolder))
+                        //{
+                        //    case FolderType.IsTempFolder:
+                        //    case FolderType.IsUsersFolders:
+                        //    case FolderType.IsProgramFilesFolder:
+                        //    case FolderType.IsWindowsFolder:
+                        //    case FolderType.IsRootFolder:
+                        //        String Constructed_Msg = String.Empty;
 
-                                Constructed_Msg += Translations.Database("Program_TextBox_Folder_Check_Launcher") + "\n\n";
-                                Constructed_Msg += Translations.Database("Program_TextBox_Folder_Check_Launcher_P2") + "\n";
-                                Constructed_Msg += "• X:\\GameLauncher.exe " + Translations.Database("Program_TextBox_Folder_Check_Launcher_P3") + "\n";
-                                Constructed_Msg += "• C:\\Program Files\n";
-                                Constructed_Msg += "• C:\\Program Files (x86)\n";
-                                Constructed_Msg += "• C:\\Users " + Translations.Database("Program_TextBox_Folder_Check_Launcher_P4") + "\n";
-                                Constructed_Msg += "• C:\\Windows\n\n";
-                                Constructed_Msg += Translations.Database("Program_TextBox_Folder_Check_Launcher_P5") + "\n";
-                                Constructed_Msg += "• 'C:\\Soapbox Race World' " + Translations.Database("Program_TextBox_Folder_Check_Launcher_P6") + " 'C:\\SBRW'\n";
-                                Constructed_Msg += Translations.Database("Program_TextBox_Folder_Check_Launcher_P7") + "\n\n";
+                        //        Constructed_Msg += Translations.Database("Program_TextBox_Folder_Check_Launcher") + "\n\n";
+                        //        Constructed_Msg += Translations.Database("Program_TextBox_Folder_Check_Launcher_P2") + "\n";
+                        //        Constructed_Msg += "• X:\\GameLauncher.exe " + Translations.Database("Program_TextBox_Folder_Check_Launcher_P3") + "\n";
+                        //        Constructed_Msg += "• C:\\Program Files\n";
+                        //        Constructed_Msg += "• C:\\Program Files (x86)\n";
+                        //        Constructed_Msg += "• C:\\Users " + Translations.Database("Program_TextBox_Folder_Check_Launcher_P4") + "\n";
+                        //        Constructed_Msg += "• C:\\Windows\n\n";
+                        //        Constructed_Msg += Translations.Database("Program_TextBox_Folder_Check_Launcher_P5") + "\n";
+                        //        Constructed_Msg += "• 'C:\\Soapbox Race World' " + Translations.Database("Program_TextBox_Folder_Check_Launcher_P6") + " 'C:\\SBRW'\n";
+                        //        Constructed_Msg += Translations.Database("Program_TextBox_Folder_Check_Launcher_P7") + "\n\n";
 
-                                MessageBox.Show(null, Constructed_Msg, "GameLauncher", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                FunctionStatus.LauncherForceClose = true;
-                                break;
-                        }
+                        //        MessageBox.Show(null, Constructed_Msg, "GameLauncher", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        //        FunctionStatus.LauncherForceClose = true;
+                        //        break;
+                        //}
 
                         Log.Completed("FOLDER LOCATION: Done");
                     }

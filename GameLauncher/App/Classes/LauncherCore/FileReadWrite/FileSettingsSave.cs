@@ -125,7 +125,7 @@ namespace GameLauncher.App.Classes.LauncherCore.FileReadWrite
 
             if (UnixOS.Detected() && !settingFile.KeyExists("InstallationDirectory"))
             {
-                settingFile.Write("InstallationDirectory", "GameFiles");
+                settingFile.Write("InstallationDirectory", "Game Files");
             }
             else if (!settingFile.KeyExists("InstallationDirectory"))
             {

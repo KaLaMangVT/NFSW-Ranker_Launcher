@@ -33,7 +33,7 @@
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>SBRW.ico</ApplicationIcon>
+    <ApplicationIcon>Logo.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <StartupObject>GameLauncher.Program</StartupObject>
@@ -473,6 +473,7 @@
     <None Include="Resources\Icons\icon_shield_warning_click.png" />
     <None Include="Resources\Icons\icon_shield_warning_hover.png" />
     <None Include="Resources\Images\img_welcomescreen.jpeg" />
+    <Content Include="Logo.ico" />
     <Content Include="SBRW.ico" />
     <None Include="Resources\ProgressBars\progress_warning.png" />
     <None Include="Resources\ProgressBars\progress_success.png" />

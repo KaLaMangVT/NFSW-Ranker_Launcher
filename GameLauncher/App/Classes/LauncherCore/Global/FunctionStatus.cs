@@ -335,13 +335,13 @@ namespace GameLauncher.App.Classes.LauncherCore.Global
                             //        }
                             //        catch
                             //        {
-                            //            FileSettingsSave.GameInstallation = "GameFiles";
+                            //            FileSettingsSave.GameInstallation = "Game Files";
                             //        }
                             //    }
                             //}
 
                             string exeDirectory = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
-                            string gameFilesDirectory = Path.Combine(exeDirectory, "GameFiles");
+                            string gameFilesDirectory = Path.Combine(exeDirectory, "Game Files");
                             FileSettingsSave.GameInstallation = gameFilesDirectory;
 
                             if (!string.IsNullOrWhiteSpace(FileSettingsSave.GameInstallation))
@@ -389,44 +389,44 @@ namespace GameLauncher.App.Classes.LauncherCore.Global
                     Log.Checking("LAUNCHER: Checking Game Path Location");
                     DiscordLauncherPresence.Status("Start Up", "Checking Game Files Folder Location");
 
-                    switch (CheckFolder(FileSettingsSave.GameInstallation))
-                    {
-                        case FolderType.IsSameAsLauncherFolder:
-                            Directory.CreateDirectory("Game Files");
-                            Log.Error("LAUNCHER: Installing NFSW in same location where the GameLauncher resides is NOT allowed.");
-                            MessageBox.Show(null, string.Format("Installing NFSW in same location where the GameLauncher resides is NOT allowed.\n" +
-                                "Instead, we will install it at {0}.", Locations.GameFilesFailSafePath),
-                                "GameLauncher", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            FileSettingsSave.GameInstallation = Locations.GameFilesFailSafePath;
-                            break;
-                        case FolderType.IsTempFolder:
-                        case FolderType.IsUsersFolders:
-                        case FolderType.IsProgramFilesFolder:
-                        case FolderType.IsWindowsFolder:
-                        case FolderType.IsRootFolder:
-                            String constructMsg = String.Empty;
-                            constructMsg += "Using this location for Game Files is not allowed.\n\n";
-                            constructMsg += "The following locations are also NOT allowed:\n";
-                            constructMsg += "• X:\\nfsw.exe (Root of Drive, such as C:\\ or D:\\, must be in a folder)\n";
-                            constructMsg += "• C:\\Program Files\n";
-                            constructMsg += "• C:\\Program Files (x86)\n";
-                            constructMsg += "• C:\\Users (Includes 'Desktop', 'Documents', 'Downloads')\n";
-                            constructMsg += "• C:\\Windows\n\n";
-                            constructMsg += "Instead, we will install the NFSW Game at " + Locations.GameFilesFailSafePath;
-                            try
-                            {
-                                if (!Directory.Exists(Locations.GameFilesFailSafePath))
-                                {
-                                    Log.Core("FOLDER SELECT DIALOG: Created Game Files Directory: " + Locations.GameFilesFailSafePath);
-                                    Directory.CreateDirectory(Locations.GameFilesFailSafePath);
-                                }
-                            }
-                            catch { }
-                            MessageBox.Show(null, constructMsg, "GameLauncher", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            Log.Error("LAUNCHER: Installing NFSW in a Restricted Location is not allowed.");
-                            FileSettingsSave.GameInstallation = Locations.GameFilesFailSafePath;
-                            break;
-                    }
+                    //switch (CheckFolder(FileSettingsSave.GameInstallation))
+                    //{
+                    //    case FolderType.IsSameAsLauncherFolder:
+                    //        Directory.CreateDirectory("Game Files");
+                    //        Log.Error("LAUNCHER: Installing NFSW in same location where the GameLauncher resides is NOT allowed.");
+                    //        MessageBox.Show(null, string.Format("Installing NFSW in same location where the GameLauncher resides is NOT allowed.\n" +
+                    //            "Instead, we will install it at {0}.", Locations.GameFilesFailSafePath),
+                    //            "GameLauncher", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //        FileSettingsSave.GameInstallation = Locations.GameFilesFailSafePath;
+                    //        break;
+                    //    case FolderType.IsTempFolder:
+                    //    case FolderType.IsUsersFolders:
+                    //    case FolderType.IsProgramFilesFolder:
+                    //    case FolderType.IsWindowsFolder:
+                    //    case FolderType.IsRootFolder:
+                    //        String constructMsg = String.Empty;
+                    //        constructMsg += "Using this location for Game Files is not allowed.\n\n";
+                    //        constructMsg += "The following locations are also NOT allowed:\n";
+                    //        constructMsg += "• X:\\nfsw.exe (Root of Drive, such as C:\\ or D:\\, must be in a folder)\n";
+                    //        constructMsg += "• C:\\Program Files\n";
+                    //        constructMsg += "• C:\\Program Files (x86)\n";
+                    //        constructMsg += "• C:\\Users (Includes 'Desktop', 'Documents', 'Downloads')\n";
+                    //        constructMsg += "• C:\\Windows\n\n";
+                    //        constructMsg += "Instead, we will install the NFSW Game at " + Locations.GameFilesFailSafePath;
+                    //        try
+                    //        {
+                    //            if (!Directory.Exists(Locations.GameFilesFailSafePath))
+                    //            {
+                    //                Log.Core("FOLDER SELECT DIALOG: Created Game Files Directory: " + Locations.GameFilesFailSafePath);
+                    //                Directory.CreateDirectory(Locations.GameFilesFailSafePath);
+                    //            }
+                    //        }
+                    //        catch { }
+                    //        MessageBox.Show(null, constructMsg, "GameLauncher", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //        Log.Error("LAUNCHER: Installing NFSW in a Restricted Location is not allowed.");
+                    //        FileSettingsSave.GameInstallation = Locations.GameFilesFailSafePath;
+                    //        break;
+                    //}
                     FileSettingsSave.SaveSettings();
                     Log.Completed("LAUNCHER: Done Checking Game Path Location");
                 }

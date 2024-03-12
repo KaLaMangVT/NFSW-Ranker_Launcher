@@ -522,6 +522,7 @@ namespace GameLauncher.App.UI_Forms.Settings_Screen
             this.ButtonSecurityPanel.TabIndex = 193;
             this.ButtonSecurityPanel.Text = "ระบบความปลอดภัย";
             this.ButtonSecurityPanel.UseVisualStyleBackColor = false;
+            this.ButtonSecurityPanel.Visible = false;
             // 
             // SettingsClearLauncherLogsButton
             // 
