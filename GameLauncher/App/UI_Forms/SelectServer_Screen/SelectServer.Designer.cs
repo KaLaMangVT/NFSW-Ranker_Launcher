@@ -44,7 +44,7 @@ namespace GameLauncher.App.UI_Forms.SelectServer_Screen
             this.ServerListRenderer.AutoArrange = false;
             this.ServerListRenderer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(29)))), ((int)(((byte)(38)))));
             this.ServerListRenderer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ServerListRenderer.Font = new System.Drawing.Font("DejaVu Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ServerListRenderer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ServerListRenderer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(210)))), ((int)(((byte)(255)))));
             this.ServerListRenderer.GridLines = true;
             this.ServerListRenderer.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
@@ -60,7 +60,7 @@ namespace GameLauncher.App.UI_Forms.SelectServer_Screen
             // Loading
             // 
             this.Loading.BackColor = System.Drawing.Color.Transparent;
-            this.Loading.Font = new System.Drawing.Font("DejaVu Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Loading.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Loading.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(200)))), ((int)(((byte)(0)))));
             this.Loading.Location = new System.Drawing.Point(234, 242);
             this.Loading.Name = "Loading";
@@ -74,7 +74,7 @@ namespace GameLauncher.App.UI_Forms.SelectServer_Screen
             this.BtnAddServer.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(181)))), ((int)(((byte)(191)))));
             this.BtnAddServer.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(58)))), ((int)(((byte)(76)))));
             this.BtnAddServer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnAddServer.Font = new System.Drawing.Font("DejaVu Sans", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnAddServer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnAddServer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.BtnAddServer.Location = new System.Drawing.Point(15, 247);
             this.BtnAddServer.Name = "BtnAddServer";
@@ -82,6 +82,7 @@ namespace GameLauncher.App.UI_Forms.SelectServer_Screen
             this.BtnAddServer.TabIndex = 4;
             this.BtnAddServer.Text = "Add Server";
             this.BtnAddServer.UseVisualStyleBackColor = false;
+            this.BtnAddServer.Visible = false;
             this.BtnAddServer.Click += new System.EventHandler(this.BtnAddServer_Click);
             // 
             // BtnSelectServer
@@ -90,13 +91,13 @@ namespace GameLauncher.App.UI_Forms.SelectServer_Screen
             this.BtnSelectServer.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(181)))), ((int)(((byte)(191)))));
             this.BtnSelectServer.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(58)))), ((int)(((byte)(76)))));
             this.BtnSelectServer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnSelectServer.Font = new System.Drawing.Font("DejaVu Sans", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnSelectServer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnSelectServer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.BtnSelectServer.Location = new System.Drawing.Point(399, 247);
             this.BtnSelectServer.Name = "BtnSelectServer";
             this.BtnSelectServer.Size = new System.Drawing.Size(75, 23);
             this.BtnSelectServer.TabIndex = 2;
-            this.BtnSelectServer.Text = "Select";
+            this.BtnSelectServer.Text = "ยืนยัน";
             this.BtnSelectServer.UseVisualStyleBackColor = false;
             // 
             // BtnClose
@@ -105,20 +106,20 @@ namespace GameLauncher.App.UI_Forms.SelectServer_Screen
             this.BtnClose.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(181)))), ((int)(((byte)(191)))));
             this.BtnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(58)))), ((int)(((byte)(76)))));
             this.BtnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnClose.Font = new System.Drawing.Font("DejaVu Sans", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnClose.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.BtnClose.Location = new System.Drawing.Point(480, 247);
             this.BtnClose.Name = "BtnClose";
             this.BtnClose.Size = new System.Drawing.Size(75, 23);
             this.BtnClose.TabIndex = 8;
-            this.BtnClose.Text = "Close";
+            this.BtnClose.Text = "ปิด";
             this.BtnClose.UseVisualStyleBackColor = false;
             this.BtnClose.Click += new System.EventHandler(this.BtnClose_Click);
             // 
             // Version
             // 
             this.Version.BackColor = System.Drawing.Color.Transparent;
-            this.Version.Font = new System.Drawing.Font("DejaVu Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Version.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Version.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.Version.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Version.Location = new System.Drawing.Point(213, 260);
@@ -134,7 +135,7 @@ namespace GameLauncher.App.UI_Forms.SelectServer_Screen
             this.BtnRemoveServer.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(181)))), ((int)(((byte)(191)))));
             this.BtnRemoveServer.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(58)))), ((int)(((byte)(76)))));
             this.BtnRemoveServer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnRemoveServer.Font = new System.Drawing.Font("DejaVu Sans", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnRemoveServer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnRemoveServer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.BtnRemoveServer.Location = new System.Drawing.Point(117, 247);
             this.BtnRemoveServer.Name = "BtnRemoveServer";
@@ -142,6 +143,7 @@ namespace GameLauncher.App.UI_Forms.SelectServer_Screen
             this.BtnRemoveServer.TabIndex = 6;
             this.BtnRemoveServer.Text = "Remove";
             this.BtnRemoveServer.UseVisualStyleBackColor = false;
+            this.BtnRemoveServer.Visible = false;
             // 
             // SelectServer
             // 
@@ -156,7 +158,7 @@ namespace GameLauncher.App.UI_Forms.SelectServer_Screen
             this.Controls.Add(this.Loading);
             this.Controls.Add(this.ServerListRenderer);
             this.DoubleBuffered = true;
-            this.Font = new System.Drawing.Font("DejaVu Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -164,7 +166,7 @@ namespace GameLauncher.App.UI_Forms.SelectServer_Screen
             this.MinimizeBox = false;
             this.Name = "SelectServer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Please Select a Server - SBRW Launcher";
+            this.Text = "เลือกเซิร์ฟเวอร์";
             this.ResumeLayout(false);
 
         }

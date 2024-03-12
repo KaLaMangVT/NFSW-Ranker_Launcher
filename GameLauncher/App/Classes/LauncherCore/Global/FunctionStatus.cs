@@ -251,94 +251,98 @@ namespace GameLauncher.App.Classes.LauncherCore.Global
 
                         try
                         {
-                            if (!UnixOS.Detected())
-                            {
-                                string GameFolderPath = string.Empty;
+                            //if (!UnixOS.Detected())
+                            //{
+                            //    string GameFolderPath = string.Empty;
 
-                                CommonOpenFileDialog FolderDialog = new CommonOpenFileDialog
-                                {
-                                    EnsurePathExists = true,
-                                    EnsureFileExists = false,
-                                    AllowNonFileSystemItems = false,
-                                    Title = "Select the location to Find or Download NFS:W",
-                                    IsFolderPicker = true
-                                };
+                            //    CommonOpenFileDialog FolderDialog = new CommonOpenFileDialog
+                            //    {
+                            //        EnsurePathExists = true,
+                            //        EnsureFileExists = false,
+                            //        AllowNonFileSystemItems = false,
+                            //        Title = "Select the location to Find or Download NFS:W",
+                            //        IsFolderPicker = true
+                            //    };
 
-                                if (FolderDialog.ShowDialog() == CommonFileDialogResult.Ok)
-                                {
-                                    if (!string.IsNullOrWhiteSpace(Strings.Encode(FolderDialog.FileName)))
-                                    {
-                                        GameFolderPath = Strings.Encode(FolderDialog.FileName);
-                                    }
-                                }
+                            //    if (FolderDialog.ShowDialog() == CommonFileDialogResult.Ok)
+                            //    {
+                            //        if (!string.IsNullOrWhiteSpace(Strings.Encode(FolderDialog.FileName)))
+                            //        {
+                            //            GameFolderPath = Strings.Encode(FolderDialog.FileName);
+                            //        }
+                            //    }
 
-                                FolderDialog.Dispose();
+                            //    FolderDialog.Dispose();
 
-                                if (!string.IsNullOrWhiteSpace(GameFolderPath))
-                                {
-                                    DiscordLauncherPresence.Status("Start Up", "Verifying Game Files Folder Location");
+                            //    if (!string.IsNullOrWhiteSpace(GameFolderPath))
+                            //    {
+                            //        DiscordLauncherPresence.Status("Start Up", "Verifying Game Files Folder Location");
 
-                                    if (!HasWriteAccessToFolder(GameFolderPath))
-                                    {
-                                        Log.Error("FOLDER SELECT DIALOG: Not enough permissions. Exiting.");
-                                        string ErrorMessage = "You don't have enough permission to select this path as the Installation folder. " +
-                                            "Please select another directory.";
-                                        MessageBox.Show(null, ErrorMessage, "GameLauncher", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                        LauncherForceClose = true;
-                                        LauncherForceCloseReason = ErrorMessage;
-                                    }
-                                    else
-                                    {
-                                        if (GameFolderPath.Length == 3)
-                                        {
-                                            Directory.CreateDirectory("Game Files");
-                                            Log.Warning("FOLDER SELECT DIALOG: Installing NFSW in root of the harddisk is not allowed.");
-                                            MessageBox.Show(null, string.Format("Installing NFSW in root of the harddisk is not allowed. " +
-                                                "Instead, we will install it on {0}.", Locations.GameFilesFailSafePath),
-                                                "GameLauncher", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                            FileSettingsSave.GameInstallation = Locations.GameFilesFailSafePath;
-                                            FileSettingsSave.SaveSettings();
-                                            FileGameSettings.Save("Suppress", "Language Only");
-                                        }
-                                        else if (GameFolderPath == Locations.LauncherFolder)
-                                        {
-                                            Directory.CreateDirectory("Game Files");
-                                            Log.Warning("FOLDER SELECT DIALOG: Installing NFSW in same location where the GameLauncher resides is NOT allowed.");
-                                            MessageBox.Show(null, string.Format("Installing NFSW in same location where the GameLauncher resides is NOT allowed.\n " +
-                                                "Instead, we will install it on {0}.", Locations.GameFilesFailSafePath),
-                                                "GameLauncher", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                            FileSettingsSave.GameInstallation = Locations.GameFilesFailSafePath;
-                                            FileSettingsSave.SaveSettings();
-                                            FileGameSettings.Save("Suppress", "Language Only");
-                                        }
-                                        else
-                                        {
-                                            Log.Core("FOLDER SELECT DIALOG: Directory Set: " + GameFolderPath);
-                                            FileSettingsSave.GameInstallation = GameFolderPath;
-                                            FileSettingsSave.SaveSettings();
-                                            FileGameSettings.Save("Suppress", "Language Only");
-                                        }
-                                    }
-                                }
-                                else
-                                {
-                                    LauncherForceClose = true;
-                                }
-                            }
-                            else
-                            {
-                                if (string.IsNullOrWhiteSpace(FileSettingsSave.GameInstallation))
-                                {
-                                    try
-                                    {
-                                        FileSettingsSave.GameInstallation = Strings.Encode(Path.GetFullPath("GameFiles"));
-                                    }
-                                    catch
-                                    {
-                                        FileSettingsSave.GameInstallation = "GameFiles";
-                                    }
-                                }
-                            }
+                            //        if (!HasWriteAccessToFolder(GameFolderPath))
+                            //        {
+                            //            Log.Error("FOLDER SELECT DIALOG: Not enough permissions. Exiting.");
+                            //            string ErrorMessage = "You don't have enough permission to select this path as the Installation folder. " +
+                            //                "Please select another directory.";
+                            //            MessageBox.Show(null, ErrorMessage, "GameLauncher", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            //            LauncherForceClose = true;
+                            //            LauncherForceCloseReason = ErrorMessage;
+                            //        }
+                            //        else
+                            //        {
+                            //            if (GameFolderPath.Length == 3)
+                            //            {
+                            //                Directory.CreateDirectory("Game Files");
+                            //                Log.Warning("FOLDER SELECT DIALOG: Installing NFSW in root of the harddisk is not allowed.");
+                            //                MessageBox.Show(null, string.Format("Installing NFSW in root of the harddisk is not allowed. " +
+                            //                    "Instead, we will install it on {0}.", Locations.GameFilesFailSafePath),
+                            //                    "GameLauncher", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            //                FileSettingsSave.GameInstallation = Locations.GameFilesFailSafePath;
+                            //                FileSettingsSave.SaveSettings();
+                            //                FileGameSettings.Save("Suppress", "Language Only");
+                            //            }
+                            //            else if (GameFolderPath == Locations.LauncherFolder)
+                            //            {
+                            //                Directory.CreateDirectory("Game Files");
+                            //                Log.Warning("FOLDER SELECT DIALOG: Installing NFSW in same location where the GameLauncher resides is NOT allowed.");
+                            //                MessageBox.Show(null, string.Format("Installing NFSW in same location where the GameLauncher resides is NOT allowed.\n " +
+                            //                    "Instead, we will install it on {0}.", Locations.GameFilesFailSafePath),
+                            //                    "GameLauncher", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            //                FileSettingsSave.GameInstallation = Locations.GameFilesFailSafePath;
+                            //                FileSettingsSave.SaveSettings();
+                            //                FileGameSettings.Save("Suppress", "Language Only");
+                            //            }
+                            //            else
+                            //            {
+                            //                Log.Core("FOLDER SELECT DIALOG: Directory Set: " + GameFolderPath);
+                            //                FileSettingsSave.GameInstallation = GameFolderPath;
+                            //                FileSettingsSave.SaveSettings();
+                            //                FileGameSettings.Save("Suppress", "Language Only");
+                            //            }
+                            //        }
+                            //    }
+                            //    else
+                            //    {
+                            //        LauncherForceClose = true;
+                            //    }
+                            //}
+                            //else
+                            //{
+                            //    if (string.IsNullOrWhiteSpace(FileSettingsSave.GameInstallation))
+                            //    {
+                            //        try
+                            //        {
+                            //            FileSettingsSave.GameInstallation = Strings.Encode(Path.GetFullPath("GameFiles"));
+                            //        }
+                            //        catch
+                            //        {
+                            //            FileSettingsSave.GameInstallation = "GameFiles";
+                            //        }
+                            //    }
+                            //}
+
+                            string exeDirectory = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
+                            string gameFilesDirectory = Path.Combine(exeDirectory, "GameFiles");
+                            FileSettingsSave.GameInstallation = gameFilesDirectory;
 
                             if (!string.IsNullOrWhiteSpace(FileSettingsSave.GameInstallation))
                             {

@@ -176,6 +176,7 @@ namespace GameLauncher.App.UI_Forms.Settings_Screen
             this.SettingsVFilesButton.TabIndex = 100;
             this.SettingsVFilesButton.Text = "ตรวจสอบไฟล์เกม";
             this.SettingsVFilesButton.UseVisualStyleBackColor = false;
+            this.SettingsVFilesButton.Visible = false;
             // 
             // SettingsGamePathText
             // 

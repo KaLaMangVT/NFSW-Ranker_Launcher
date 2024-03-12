@@ -92,11 +92,11 @@ namespace GameLauncher.App.UI_Forms.Welcome_Screen
             this.ButtonSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonSave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ButtonSave.Location = new System.Drawing.Point(5, 287);
+            this.ButtonSave.Location = new System.Drawing.Point(73, 287);
             this.ButtonSave.Name = "ButtonSave";
-            this.ButtonSave.Size = new System.Drawing.Size(400, 32);
+            this.ButtonSave.Size = new System.Drawing.Size(261, 32);
             this.ButtonSave.TabIndex = 5;
-            this.ButtonSave.Text = "บันทึกการตั้งค่าแล้ว ต่อไปจะเป็นการเลือกโฟนเดอร์ที่บันทึกเกม";
+            this.ButtonSave.Text = "บันทึกการตั้งค่า";
             this.ButtonSave.UseVisualStyleBackColor = false;
             this.ButtonSave.Click += new System.EventHandler(this.Save_Click);
             // 
@@ -202,7 +202,7 @@ namespace GameLauncher.App.UI_Forms.Welcome_Screen
             this.Name = "WelcomeScreen";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Welcome - SBRW Laucher";
+            this.Text = "ยินดีต้อนรับ เข้าสู่เมืองแห่งการแข่งขัน";
             this.Load += new System.EventHandler(this.WelcomeScreen_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

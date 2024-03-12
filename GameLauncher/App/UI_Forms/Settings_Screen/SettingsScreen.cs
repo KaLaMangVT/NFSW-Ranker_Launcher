@@ -1087,14 +1087,15 @@ namespace GameLauncher.App.UI_Forms.Settings_Screen
         {
             if (!UnixOS.Detected())
             {
+                string exeDirectory = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
                 System.Windows.Forms.OpenFileDialog changeGameFilesPath = new System.Windows.Forms.OpenFileDialog
                 {
-                    InitialDirectory = "C:\\",
+                    InitialDirectory = exeDirectory,
                     ValidateNames = false,
                     CheckFileExists = false,
                     CheckPathExists = true,
-                    Title = "Select the location to Find or Download nfsw.exe",
-                    FileName = "Select Game Files Folder"
+                    Title = "เลือกโฟลเดอร์ที่ใช้สำหรับติดตั้งไฟล์เกม nfsw.exe",
+                    FileName = "เลือกโฟลเดอร์ GameFiles หรือโฟลเดอร์ที่ต้องการติดตั้งตัวเกม"
                 };
 
                 if (changeGameFilesPath.ShowDialog() == DialogResult.OK)
