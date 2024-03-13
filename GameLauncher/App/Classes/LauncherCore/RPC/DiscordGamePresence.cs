@@ -35,7 +35,7 @@ namespace GameLauncher.App.Classes.LauncherCore.RPC
         public static string PersonaCarId = String.Empty;
         public static string PersonaCarName = String.Empty;
         public static string LoggedPersonaId = String.Empty;
-        public static string LauncherRPC = "SBRW Launcher: v" + Theming.PrivacyRPCBuild;
+        public static string LauncherRPC = "Launcher: v" + Theming.PrivacyRPCBuild;
         public static int PersonaTreasure = 0;
         public static int TotalTreasure = 15;
         public static int THDay = 0;
@@ -107,6 +107,8 @@ namespace GameLauncher.App.Classes.LauncherCore.RPC
                             Label = "Website",
                             Url = _serverWebsiteLink
                         });
+
+                        //Log.Warning("Link Package:" + _serverWebsiteLink);
                     }
 
                     if (!String.IsNullOrWhiteSpace(_serverDiscordLink))
@@ -116,8 +118,13 @@ namespace GameLauncher.App.Classes.LauncherCore.RPC
                             Label = "Discord",
                             Url = _serverDiscordLink
                         });
+
+                        //Log.Warning("Link Package:" + _serverDiscordLink);
                     }
                 }
+
+                // [Fix]
+                Log.Warning("URI Package:" + uri);
 
                 if (uri == "/User/SecureLoginPersona")
                 {
@@ -206,22 +213,22 @@ namespace GameLauncher.App.Classes.LauncherCore.RPC
 
                     /* Actively Collection Treasure Hunt Gems */
                     PersonaTreasure++;
+                    _presence.Details = "ขับรถ " + PersonaCarName;
 
                     if (PersonaTreasure != TotalTreasure)
                     {
-                        _presence.Details = "Collecting Gems (" + PersonaTreasure + " of " + TotalTreasure + ")";
+                        _presence.State = "เก็บเพชร (ได้รับ " + PersonaTreasure + " จาก " + TotalTreasure + ")";
                     }
                     else if (PersonaTreasure == TotalTreasure)
                     {
-                        _presence.Details = "Finished Collecting Gems (" + PersonaTreasure + " of " + TotalTreasure + ")";
+                        _presence.State = "ภาระกิจเก็บเพชรเสร็จสิ้นแล้ว";
                     }
 
-                    _presence.State = LauncherRPC;
                     _presence.Assets = new Assets
                     {
                         LargeImageText = PersonaName + " - Level: " + PersonaLevel,
                         LargeImageKey = PersonaAvatarId,
-                        SmallImageText = "Treasure Hunt - Day: " + THDay,
+                        SmallImageText = "ล่าสมบัติ - วันที่: " + THDay,
                         SmallImageKey = "gamemode_treasure"
                     };
                     _presence.Buttons = DiscordLauncherPresence.ButtonsList.ToArray();
@@ -236,19 +243,19 @@ namespace GameLauncher.App.Classes.LauncherCore.RPC
                     _presence.Assets = new Assets();
                     if (UpdatePersonaPresenceParam == "1")
                     {
-                        _presence.Details = "Driving " + PersonaCarName;
-                        _presence.Assets.SmallImageText = "In-Freeroam";
+                        _presence.Details = "กำลังขับรถ";
+                        _presence.Assets.SmallImageText = "Free Roam";
                         _presence.Assets.SmallImageKey = "gamemode_freeroam";
-                        _presence.State = LauncherRPC;
+                        _presence.State = PersonaCarName;
                         eventTerminatedManually = FunctionStatus.CanCloseGame = true;
                         inSafeHouse = false;
                     }
                     else
                     {
-                        _presence.Details = "In Safehouse";
-                        _presence.Assets.SmallImageText = "In-Safehouse";
+                        _presence.Details = "อยู่ที่เซฟเฮาส์ส่วนตัว";
+                        _presence.Assets.SmallImageText = "เซฟเฮาส์";
                         _presence.Assets.SmallImageKey = "gamemode_safehouse";
-                        _presence.State = serverName;
+                        _presence.State = string.Empty;
                         eventTerminatedManually = FunctionStatus.CanCloseGame = false;
                         inSafeHouse = true;
                     }
@@ -263,13 +270,13 @@ namespace GameLauncher.App.Classes.LauncherCore.RPC
                 if (uri == "/matchmaking/leavelobby" || uri == "/matchmaking/declineinvite")
                 {
                     /* Display Current Car in Freeroam */
-                    _presence.Details = "Driving " + PersonaCarName;
-                    _presence.State = LauncherRPC;
+                    _presence.Details = "กำลังขับรถ";
+                    _presence.State = PersonaCarName;
                     _presence.Assets = new Assets
                     {
                         LargeImageText = PersonaName + " - Level: " + PersonaLevel,
                         LargeImageKey = PersonaAvatarId,
-                        SmallImageText = "In-Freeroam",
+                        SmallImageText = "Free Roam",
                         SmallImageKey = "gamemode_freeroam"
                     };
                     _presence.Buttons = DiscordLauncherPresence.ButtonsList.ToArray();
@@ -296,13 +303,13 @@ namespace GameLauncher.App.Classes.LauncherCore.RPC
                     {
                         EventID = Convert.ToInt32(eventIdNode.InnerText);
 
-                        _presence.Details = "In Lobby: " + EventsList.GetEventName(EventID);
-                        _presence.State = serverName;
+                        _presence.Details = "กำลังรอแข่ง: " + EventsList.GetEventName(EventID);
+                        _presence.State = "ใช้รถ " + PersonaCarName;
                         _presence.Assets = new Assets
                         {
                             LargeImageText = PersonaName + " - Level: " + PersonaLevel,
                             LargeImageKey = PersonaAvatarId,
-                            SmallImageText = LauncherRPC,
+                            SmallImageText = EventsList.GetEventTypeString(EventsList.GetEventType(Convert.ToInt32(EventID))),
                             SmallImageKey = EventsList.GetEventType(Convert.ToInt32(EventID))
                         };
                         _presence.Buttons = DiscordLauncherPresence.ButtonsList.ToArray();
@@ -315,13 +322,13 @@ namespace GameLauncher.App.Classes.LauncherCore.RPC
                     eventTerminatedManually = FunctionStatus.CanCloseGame = true;
 
                     /* Searching for Events */
-                    _presence.Details = "Searching for Event";
+                    _presence.Details = "กำลังค้นหาการแข่งกันในเกม";
                     _presence.State = LauncherRPC;
                     _presence.Assets = new Assets
                     {
                         LargeImageText = PersonaName + " - Level: " + PersonaLevel,
                         LargeImageKey = PersonaAvatarId,
-                        SmallImageText = "In-Freeroam",
+                        SmallImageText = "Free Roam",
                         SmallImageKey = "gamemode_freeroam"
                     };
                     _presence.Buttons = DiscordLauncherPresence.ButtonsList.ToArray();
@@ -337,15 +344,34 @@ namespace GameLauncher.App.Classes.LauncherCore.RPC
 
                     EventID = Convert.ToInt32(splitted_uri[3]);
 
-                    _presence.Details = "Loading Event: " + EventsList.GetEventName(EventID);
-                    _presence.State = serverName;
+                    string ModePrefix = "";
+                    switch (EventsList.GetEventType(EventID))
+                    {
+                        case "gamemode_circuit":
+                        case "gamemode_drag":
+                        case "gamemode_sprint":
+                            ModePrefix = "สนามแข่ง";
+                            break;
+                        case "gamemode_meetingplace":
+                            ModePrefix = "จุดนัดพบ";
+                            break;
+                        case "gamemode_pursuit_mp":
+                        case "gamemode_pursuit_sp":
+                            ModePrefix = "หลบหนีในเขต";
+                            break;
+                    }
+
+                    _presence.Details = ModePrefix + ": " + EventsList.GetEventName(EventID);
+                    _presence.State = "ขับรถ " + PersonaCarName;
                     _presence.Assets = new Assets
                     {
                         LargeImageText = PersonaName + " - Level: " + PersonaLevel,
                         LargeImageKey = PersonaAvatarId,
-                        SmallImageText = LauncherRPC,
+                        SmallImageText = EventsList.GetEventTypeString(EventsList.GetEventType(EventID)),
                         SmallImageKey = EventsList.GetEventType(EventID)
                     };
+
+                    //Log.Completed("Mode: " + EventID + " |" + EventsList.GetEventTypeString(EventsList.GetEventType(EventID)) + "|" + EventsList.GetEventType(EventID));
                     _presence.Buttons = DiscordLauncherPresence.ButtonsList.ToArray();
 
                     if (DiscordLauncherPresence.Running()) DiscordLauncherPresence.Client.SetPresence(_presence);
@@ -353,13 +379,30 @@ namespace GameLauncher.App.Classes.LauncherCore.RPC
                 else if (uri == "/event/launched" && !eventTerminatedManually)
                 {
                     /* Once the Race Starts */
-                    _presence.Details = "In Event: " + EventsList.GetEventName(EventID);
-                    _presence.State = serverName;
+                    string ModePrefix = "";
+                    switch (EventsList.GetEventType(EventID))
+                    {
+                        case "gamemode_circuit":
+                        case "gamemode_drag":
+                        case "gamemode_sprint":
+                            ModePrefix = "สนามแข่ง";
+                            break;
+                        case "gamemode_meetingplace":
+                            ModePrefix = "จุดนัดพบ";
+                            break;
+                        case "gamemode_pursuit_mp":
+                        case "gamemode_pursuit_sp":
+                            ModePrefix = "หลบหนีในเขต";
+                            break;
+                    }
+
+                    _presence.Details = ModePrefix + ": " + EventsList.GetEventName(EventID);
+                    _presence.State = "ขับรถ " + PersonaCarName;
                     _presence.Assets = new Assets
                     {
                         LargeImageText = PersonaName + " - Level: " + PersonaLevel,
                         LargeImageKey = PersonaAvatarId,
-                        SmallImageText = LauncherRPC,
+                        SmallImageText = EventsList.GetEventTypeString(EventsList.GetEventType(EventID)),
                         SmallImageKey = EventsList.GetEventType(EventID)
                     };
                     _presence.Buttons = DiscordLauncherPresence.ButtonsList.ToArray();
@@ -371,16 +414,96 @@ namespace GameLauncher.App.Classes.LauncherCore.RPC
                 }
                 else if (uri == "/event/arbitration")
                 {
+                    // [Fix]
+                    //Log.Warning("SBRW Package:" + serverreply);
+
+                    string AdditionDetail = string.Empty;
+                    string AdditionState = string.Empty;
+
+                    SBRW_XML.LoadXml(serverreply);
+                    XmlNode HeatNode = SBRW_XML.SelectSingleNode("PursuitEventResult/Heat");
+                    double Heat = 0;
+                    if (HeatNode != null)
+                    {
+                        Heat = Convert.ToDouble(HeatNode.InnerText);
+                        Heat = Math.Round((((Heat - 1) / 4) * 100), 2);
+                        AdditionDetail = "หนีออกจาก: " + EventsList.GetEventName(EventID);
+                        AdditionState = "สำเร็จ ในระดับการไล่ล่า " + Heat + " %";
+                    }
+
+                    XmlNode rankingTeamEscapeNode = SBRW_XML.SelectSingleNode("TeamEscapeEventResult/Entrants/TeamEscapeEntrantResult/Ranking");
+                    int RankingTeamEscape = 99;
+                    if (rankingTeamEscapeNode != null)
+                    {
+                        RankingTeamEscape = Convert.ToInt32(rankingTeamEscapeNode.InnerText);
+                        AdditionDetail = "สิ้นสุดการแข่ง: " + EventsList.GetEventName(EventID);
+                        AdditionState = "เข้าเส้นชัยอันดับ: " + RankingTeamEscape;
+                    }
+
+                    XmlNode rankingRouteNode = SBRW_XML.SelectSingleNode("RouteEventResult/Entrants/RouteEntrantResult/Ranking");
+                    int RankingRoute = 99;
+                    if (rankingRouteNode != null)
+                    {
+                        RankingRoute = Convert.ToInt32(rankingRouteNode.InnerText);
+                        AdditionDetail = "สิ้นสุดการแข่ง: " + EventsList.GetEventName(EventID);
+                        AdditionState = "เข้าเส้นชัยอันดับ: " + RankingRoute;
+                    }
+
+                    XmlNode rankDragNode = SBRW_XML.SelectSingleNode("DragEventResult/Entrants/DragEntrantResult/Ranking");
+                    int RankDrag = 99;
+                    if (rankDragNode != null)
+                    {
+                        RankDrag = Convert.ToInt32(rankDragNode.InnerText);
+                        AdditionDetail = "สิ้นสุดการแข่ง: " + EventsList.GetEventName(EventID);
+                        AdditionState = "เข้าเส้นชัยอันดับ: " + RankDrag;
+                    }
+
                     eventTerminatedManually = FunctionStatus.CanCloseGame = false;
 
                     /* Once the Race Finishes */
-                    _presence.Details = "Finished Event: " + EventsList.GetEventName(EventID);
-                    _presence.State = serverName;
+                    _presence.Details = AdditionDetail;
+                    _presence.State = AdditionState;
                     _presence.Assets = new Assets
                     {
                         LargeImageText = PersonaName + " - Level: " + PersonaLevel,
                         LargeImageKey = PersonaAvatarId,
-                        SmallImageText = LauncherRPC,
+                        SmallImageText = EventsList.GetEventTypeString(EventsList.GetEventType(EventID)),
+                        SmallImageKey = EventsList.GetEventType(EventID)
+                    };
+                    _presence.Buttons = DiscordLauncherPresence.ButtonsList.ToArray();
+
+                    AntiCheat.DisableChecks(true);
+                    if (DiscordLauncherPresence.Running()) DiscordLauncherPresence.Client.SetPresence(_presence);
+                }
+                else if (uri == "/event/bust")
+                {
+                    // [Fix]
+                    //Log.Warning("SBRW Package:" + serverreply);
+
+                    string AdditionDetail = string.Empty;
+                    string AdditionState = string.Empty;
+
+                    SBRW_XML.LoadXml(serverreply);
+                    XmlNode HeatNode = SBRW_XML.SelectSingleNode("PursuitEventResult/Heat");
+                    double Heat = 0;
+                    if (HeatNode != null)
+                    {
+                        Heat = Convert.ToDouble(HeatNode.InnerText);
+                        Heat = Math.Round((((Heat - 1) / 4) * 100), 2);
+                        AdditionDetail = "ล้มเหลวในการหนีจาก: " + EventsList.GetEventName(EventID);
+                        AdditionState = "ถูกจับ! ในระดับการไล่ล่า " + Heat + " %";
+                    }
+
+                    eventTerminatedManually = FunctionStatus.CanCloseGame = false;
+
+                    /* Once the Race Finishes */
+                    _presence.Details = AdditionDetail;
+                    _presence.State = AdditionState;
+                    _presence.Assets = new Assets
+                    {
+                        LargeImageText = PersonaName + " - Level: " + PersonaLevel,
+                        LargeImageKey = PersonaAvatarId,
+                        SmallImageText = EventsList.GetEventTypeString(EventsList.GetEventType(EventID)),
                         SmallImageKey = EventsList.GetEventType(EventID)
                     };
                     _presence.Buttons = DiscordLauncherPresence.ButtonsList.ToArray();
@@ -392,26 +515,41 @@ namespace GameLauncher.App.Classes.LauncherCore.RPC
                 /* Extending Safehouse */
                 if (uri.Contains("catalog") && inSafeHouse)
                 {
-                    if (GETContent.Contains("categoryName=NFSW_NA_EP_VINYLS_Category")) _presence.Details = "In Safehouse - Applying Vinyls";
-                    if (GETContent.Contains("clientProductType=PAINTS_BODY")) _presence.Details = "In Safehouse - Applying Colors";
-                    if (GETContent.Contains("clientProductType=PERFORMANCEPART")) _presence.Details = "In Safehouse - Applying Performance Parts";
-                    if (GETContent.Contains("clientProductType=VISUALPART")) _presence.Details = "In Safehouse - Applying Visual Parts";
-                    if (GETContent.Contains("clientProductType=SKILLMODPART")) _presence.Details = "In Safehouse - Applying Skillmods";
-                    if (GETContent.Contains("clientProductType=PRESETCAR")) _presence.Details = "In Safehouse - Purchasing Car";
-                    if (GETContent.Contains("categoryName=BoosterPacks")) _presence.Details = "In Safehouse - Opening Cardpacks";
+                    if (GETContent.Contains("categoryName=NFSW_NA_EP_VINYLS_Category")) _presence.Details = "อยู่ที่ร้านไวนิล";
+                    if (GETContent.Contains("clientProductType=PAINTS_BODY")) _presence.Details = "อยู่ที่ร้านทำสี";
+                    if (GETContent.Contains("clientProductType=PERFORMANCEPART")) _presence.Details = "อยู่ที่อู่รถยนต์";
+                    if (GETContent.Contains("clientProductType=VISUALPART")) _presence.Details = "อยู่ที่ร้านแต่งรถ";
+                    if (GETContent.Contains("clientProductType=SKILLMODPART")) _presence.Details = "อยู่ที่แลปพัฒนาทักษะ";
+                    if (GETContent.Contains("clientProductType=PRESETCAR")) _presence.Details = "อยู่ที่โชว์รูมรถ";
+                    if (GETContent.Contains("categoryName=BoosterPacks")) _presence.Details = "อยู่ที่ร้านสุ่มการ์ด";
 
                     _presence.Assets = new Assets
                     {
-                        SmallImageText = "In-Safehouse",
+                        SmallImageText = "เซฟเฮาส์",
                         SmallImageKey = "gamemode_safehouse"
                     };
-                    _presence.State = serverName;
+                    _presence.State = string.Empty;
                     _presence.Assets.LargeImageText = PersonaName + " - Level: " + PersonaLevel;
                     _presence.Assets.LargeImageKey = PersonaAvatarId;
                     _presence.Buttons = DiscordLauncherPresence.ButtonsList.ToArray();
 
                     if (DiscordLauncherPresence.Running()) DiscordLauncherPresence.Client.SetPresence(_presence);
                 }
+                //else
+                //{
+                //    _presence.Assets = new Assets
+                //    {
+                //        SmallImageText = string.Empty,
+                //        SmallImageKey = null
+                //    };
+                //    _presence.Details = "กำลังเลือกนักขับ";
+                //    _presence.State = serverName;
+                //    _presence.Assets.LargeImageText = string.Empty;
+                //    _presence.Assets.LargeImageKey = "nfsw";
+                //    _presence.Buttons = DiscordLauncherPresence.ButtonsList.ToArray();
+
+                //    if (DiscordLauncherPresence.Running()) DiscordLauncherPresence.Client.SetPresence(_presence);
+                //}
 
                 /* CARS RELATED */
                 foreach (var single_personaId in PersonaIds)

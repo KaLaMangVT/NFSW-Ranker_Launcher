@@ -19,7 +19,7 @@ namespace GameLauncher.App.Languages {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Thai_Texts {
@@ -214,7 +214,7 @@ namespace GameLauncher.App.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to ตรวจพบปัญหาทางฝั่งเซิฟเวอร์.
+        ///   Looks up a localized string similar to ตรวจพบปัญหาทางฝั่งเซิร์ฟเวอร์.
         /// </summary>
         internal static string APIChecker_ReceiveFailure {
             get {
@@ -583,7 +583,7 @@ namespace GameLauncher.App.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to เลือกเซิฟเวอร์.
+        ///   Looks up a localized string similar to เลือกเซิร์ฟเวอร์.
         /// </summary>
         internal static string MainScreen_Button_SelectServer {
             get {

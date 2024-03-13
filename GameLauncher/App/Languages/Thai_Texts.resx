@@ -169,7 +169,7 @@
     <value>การแก้ปัญหาชื่อพร็อกซีล้มเหลว</value>
   </data>
   <data name="APIChecker_ReceiveFailure" xml:space="preserve">
-    <value>ตรวจพบปัญหาทางฝั่งเซิฟเวอร์</value>
+    <value>ตรวจพบปัญหาทางฝั่งเซิร์ฟเวอร์</value>
   </data>
   <data name="APIChecker_RequestCanceled" xml:space="preserve">
     <value>คำขอถูกยกเลิก</value>
@@ -296,7 +296,7 @@
     <comment>Used to Display on Button</comment>
   </data>
   <data name="MainScreen_Button_SelectServer" xml:space="preserve">
-    <value>เลือกเซิฟเวอร์</value>
+    <value>เลือกเซิร์ฟเวอร์</value>
     <comment>Used to Display Button Text [Hard Coded Text]</comment>
   </data>
   <data name="MainScreen_Context_Close" xml:space="preserve">

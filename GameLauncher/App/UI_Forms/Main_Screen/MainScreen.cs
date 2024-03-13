@@ -1625,7 +1625,8 @@ namespace GameLauncher.App.UI_Forms.Main_Screen
                             if (ProcessWID == 0)
                             {
                                 ProcessWID++;
-                                User32.SetWindowText((IntPtr)oneProcess.MainWindowHandle.ToInt64(), Strings.Encode("NEED FOR SPEED™ WORLD | Server: " + ServerListUpdater.ServerName("In-Game") +
+                                //NEED FOR SPEED
+                                User32.SetWindowText((IntPtr)oneProcess.MainWindowHandle.ToInt64(), Strings.Encode(ServerListUpdater.ServerName("In-Game") +
                                     " | " + DiscordGamePresence.LauncherRPC));
                             }
                         }
@@ -1636,10 +1637,10 @@ namespace GameLauncher.App.UI_Forms.Main_Screen
                             String secondsToShutDownNamed = String.Empty;
                             /* Proper Formatting */
                             List<string> list_of_times = new List<string>();
-                            if (t.Days != 0) list_of_times.Add(t.Days + (t.Days != 1 ? " Days" : " Day"));
-                            if (t.Hours != 0) list_of_times.Add(t.Hours + (t.Hours != 1 ? " Hours" : " Hour"));
-                            if (t.Minutes != 0) list_of_times.Add(t.Minutes + (t.Minutes != 1 ? " Minutes" : " Minute"));
-                            if (t.Days == 0 && t.Hours == 0 && t.Minutes == 0) list_of_times.Add("Less than a Minute Remaining");
+                            if (t.Days != 0) list_of_times.Add(t.Days + (t.Days != 1 ? " Days" : " วัน"));
+                            if (t.Hours != 0) list_of_times.Add(t.Hours + (t.Hours != 1 ? " Hours" : " ชั่วโมง"));
+                            if (t.Minutes != 0) list_of_times.Add(t.Minutes + (t.Minutes != 1 ? " Minutes" : " นาที"));
+                            if (t.Days == 0 && t.Hours == 0 && t.Minutes == 0) list_of_times.Add("ไม่ถึง 1 นาที");
 
                             if (list_of_times.Count() >= 3 && (EnableInsiderDeveloper.Allowed() || EnableInsiderBetaTester.Allowed()))
                             {
@@ -1657,8 +1658,10 @@ namespace GameLauncher.App.UI_Forms.Main_Screen
                             {
                                 secondsToShutDownNamed = "Waiting for event to finish.";
                             }
-                            User32.SetWindowText((IntPtr)oneProcess.MainWindowHandle.ToInt64(), Strings.Encode("NEED FOR SPEED™ WORLD | Server: " + ServerListUpdater.ServerName("In-Game") +
-                                " | " + DiscordGamePresence.LauncherRPC + " | Force Restart In: " + secondsToShutDownNamed));
+                            //NEED FOR SPEED
+                            User32.SetWindowText((IntPtr)oneProcess.MainWindowHandle.ToInt64(), Strings.Encode(ServerListUpdater.ServerName("In-Game").ToUpper() +
+                                " | เกมจะเริ่มใหม่ในอีก: " + secondsToShutDownNamed));
+                            //" | " + DiscordGamePresence.LauncherRPC + " | เกมจะเริ่มใหม่ในอีก: " + secondsToShutDownNamed));
                         }
                     }
                     catch (Exception Error)

@@ -76,7 +76,7 @@ namespace GameLauncher.App.Classes.LauncherCore.RPC
                 if (State == "Start Up")
                 {
                     Presence.State = Status;
-                    Presence.Details = "In-Launcher: " + Theming.PrivacyRPCBuild;
+                    Presence.Details = "เตรียมตัวเข้าเกม: " + Theming.PrivacyRPCBuild;
                     Presence.Assets = new Assets
                     {
                         LargeImageText = "Launcher",
@@ -87,7 +87,7 @@ namespace GameLauncher.App.Classes.LauncherCore.RPC
                 {
                     Download = true;
                     Presence.State = Status;
-                    Presence.Details = "In-Launcher: " + Theming.PrivacyRPCBuild;
+                    Presence.Details = "เตรียมตัวเข้าเกม: " + Theming.PrivacyRPCBuild;
                     Presence.Assets = new Assets
                     {
                         LargeImageText = "Launcher",
@@ -101,7 +101,7 @@ namespace GameLauncher.App.Classes.LauncherCore.RPC
                 {
                     Download = true;
                     Presence.State = Status;
-                    Presence.Details = "In-Launcher: " + Theming.PrivacyRPCBuild;
+                    Presence.Details = "เตรียมตัวเข้าเกม: " + Theming.PrivacyRPCBuild;
                     Presence.Assets = new Assets
                     {
                         LargeImageText = "Launcher",
@@ -115,7 +115,7 @@ namespace GameLauncher.App.Classes.LauncherCore.RPC
                 {
                     Download = true;
                     Presence.State = "Game Download Error";
-                    Presence.Details = "In-Launcher: " + Theming.PrivacyRPCBuild;
+                    Presence.Details = "เตรียมตัวเข้าเกม: " + Theming.PrivacyRPCBuild;
                     Presence.Assets = new Assets
                     {
                         LargeImageText = "Launcher",
@@ -127,8 +127,8 @@ namespace GameLauncher.App.Classes.LauncherCore.RPC
                 }
                 else if (State == "Idle Ready")
                 {
-                    Presence.State = "Ready To Race";
-                    Presence.Details = "In-Launcher: " + Theming.PrivacyRPCBuild;
+                    Presence.State = "ดาวน์โหลดแพชเสร็จสิ้น";
+                    Presence.Details = "เตรียมตัวเข้าเกม: " + Theming.PrivacyRPCBuild;
                     Presence.Assets = new Assets
                     {
                         LargeImageText = "Launcher",
@@ -140,8 +140,8 @@ namespace GameLauncher.App.Classes.LauncherCore.RPC
                 }
                 else if (State == "Checking ModNet")
                 {
-                    Presence.State = "Checking ModNet";
-                    Presence.Details = "In-Launcher: " + Theming.PrivacyRPCBuild;
+                    Presence.State = "ตรวจสอบ ModNet";
+                    Presence.Details = "เตรียมตัวเข้าเกม: " + Theming.PrivacyRPCBuild;
                     Presence.Assets = new Assets
                     {
                         LargeImageText = "Launcher",
@@ -153,8 +153,8 @@ namespace GameLauncher.App.Classes.LauncherCore.RPC
                 }
                 else if (State == "ModNet File Check Passed")
                 {
-                    Presence.State = "Has ModNet File: " + Status;
-                    Presence.Details = "In-Launcher: " + Theming.PrivacyRPCBuild;
+                    Presence.State = "ไฟล์ ModNet: " + Status;
+                    Presence.Details = "เตรียมตัวเข้าเกม: " + Theming.PrivacyRPCBuild;
                     Presence.Assets = new Assets
                     {
                         LargeImageText = "Launcher",
@@ -166,8 +166,8 @@ namespace GameLauncher.App.Classes.LauncherCore.RPC
                 }
                 else if (State == "Download ModNet")
                 {
-                    Presence.State = "Downloading ModNet Files";
-                    Presence.Details = "In-Launcher: " + Theming.PrivacyRPCBuild;
+                    Presence.State = "กำลังดาวน์โหลด ModNet";
+                    Presence.Details = "เตรียมตัวเข้าเกม: " + Theming.PrivacyRPCBuild;
                     Presence.Assets = new Assets
                     {
                         LargeImageText = "Launcher",
@@ -179,8 +179,8 @@ namespace GameLauncher.App.Classes.LauncherCore.RPC
                 }
                 else if (State == "Download ModNet Error")
                 {
-                    Presence.State = "ModNet Encounterd an Error";
-                    Presence.Details = "In-Launcher: " + Theming.PrivacyRPCBuild;
+                    Presence.State = "ขั้นตอนการดาวน์โหลด ModNet มีปัญหา";
+                    Presence.Details = "เตรียมตัวเข้าเกม: " + Theming.PrivacyRPCBuild;
                     Presence.Assets = new Assets
                     {
                         LargeImageText = "Launcher",
@@ -192,8 +192,8 @@ namespace GameLauncher.App.Classes.LauncherCore.RPC
                 }
                 else if (State == "Download Server Mods")
                 {
-                    Presence.State = "Downloading Server Mods";
-                    Presence.Details = "In-Launcher: " + Theming.PrivacyRPCBuild;
+                    Presence.State = "กำลังดาวน์โหลด Mod จากเซิร์ฟเวอร์";
+                    Presence.Details = "เตรียมตัวเข้าเกม: " + Theming.PrivacyRPCBuild;
                     Presence.Assets = new Assets
                     {
                         LargeImageText = "Launcher",
@@ -205,7 +205,7 @@ namespace GameLauncher.App.Classes.LauncherCore.RPC
                 }
                 else if (State == "Download Server Mods Error")
                 {
-                    Presence.State = "Server Mod Download Error";
+                    Presence.State = "พบปัญหาที่เซิร์ฟเวอร์ดาวน์โหลด Mod";
                     Presence.Details = "In-Launcher: " + Theming.PrivacyRPCBuild;
                     Presence.Assets = new Assets
                     {
@@ -221,8 +221,8 @@ namespace GameLauncher.App.Classes.LauncherCore.RPC
                 {
                     if (State == "Security Center")
                     {
-                        Presence.Details = "In-Launcher: " + Theming.PrivacyRPCBuild;
-                        Presence.State = "On Security Center Screen";
+                        Presence.Details = "เตรียมตัวเข้าเกม: " + Theming.PrivacyRPCBuild;
+                        Presence.State = "ตั้งค่าศูนย์ความปลอดภัย";
                         Presence.Assets = new Assets
                         {
                             LargeImageText = "Launcher",
@@ -233,8 +233,8 @@ namespace GameLauncher.App.Classes.LauncherCore.RPC
                     }
                     else if (State == "Register")
                     {
-                        Presence.Details = "In-Launcher: " + Theming.PrivacyRPCBuild;
-                        Presence.State = "On Registration Screen";
+                        Presence.Details = "เตรียมตัวเข้าเกม: " + Theming.PrivacyRPCBuild;
+                        Presence.State = "กำลังสมัครเป็นนักแข่ง";
                         Presence.Assets = new Assets
                         {
                             LargeImageText = "Launcher",
@@ -245,8 +245,8 @@ namespace GameLauncher.App.Classes.LauncherCore.RPC
                     }
                     else if (State == "Settings")
                     {
-                        Presence.Details = "In-Launcher: " + Theming.PrivacyRPCBuild;
-                        Presence.State = "On Settings Screen";
+                        Presence.Details = "เตรียมตัวเข้าเกม: " + Theming.PrivacyRPCBuild;
+                        Presence.State = "ตั้งค่าเกม";
                         Presence.Assets = new Assets
                         {
                             LargeImageText = "Launcher",
@@ -317,11 +317,12 @@ namespace GameLauncher.App.Classes.LauncherCore.RPC
                     }
                     else if (State == "In-Game")
                     {
-                        Presence.State = ServerListUpdater.ServerName("RPC");
-                        Presence.Details = "In-Game";
+                        //Presence.State = ServerListUpdater.ServerName("RPC");
+                        Presence.State = string.Empty;
+                        Presence.Details = "สถานะ: ออนไลน์";
                         Presence.Assets = new Assets
                         {
-                            LargeImageText = "Need for Speed: World",
+                            LargeImageText = "พร้อมเล่นเกม",
                             LargeImageKey = "nfsw",
                             SmallImageText = string.Empty,
                             SmallImageKey = "ingame"
@@ -389,7 +390,7 @@ namespace GameLauncher.App.Classes.LauncherCore.RPC
                     {
                         Log.Core("DISCORD: Initializing Rich Presence Core");
 
-                        Client = new DiscordRpcClient("576154452348633108");
+                        Client = new DiscordRpcClient("1217211058050175049");
 
                         Client.OnReady += (sender, e) =>
                         {
@@ -493,7 +494,7 @@ namespace GameLauncher.App.Classes.LauncherCore.RPC
             }
             else
             {
-                return "540651192179752970";
+                return "1217211058050175049";
             }
         }
     }
