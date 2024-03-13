@@ -483,16 +483,39 @@ namespace GameLauncher.App.Classes.LauncherCore.RPC
                     string AdditionDetail = string.Empty;
                     string AdditionState = string.Empty;
 
-                    SBRW_XML.LoadXml(serverreply);
-                    XmlNode HeatNode = SBRW_XML.SelectSingleNode("PursuitEventResult/Heat");
-                    double Heat = 0;
-                    if (HeatNode != null)
-                    {
-                        Heat = Convert.ToDouble(HeatNode.InnerText);
-                        Heat = Math.Round((((Heat - 1) / 4) * 100), 2);
-                        AdditionDetail = "ล้มเหลวในการหนีจาก: " + EventsList.GetEventName(EventID);
-                        AdditionState = "ถูกจับ! ในระดับการไล่ล่า " + Heat + " %";
-                    }
+                    //SBRW_XML.LoadXml(serverreply);
+                    //XmlNode HeatNode = SBRW_XML.SelectSingleNode("PursuitArbitrationPacket/Heat");
+                    //Log.Warning("SBRW Package:" + serverreply);
+                    //if (HeatNode != null)
+                    //{
+                    //    double Heat = 0;
+                    //    Heat = Convert.ToDouble(HeatNode.InnerText);
+                    //    Heat = Math.Round((((Heat - 1) / 4) * 100), 2);
+                    //    AdditionDetail = "ล้มเหลวในการหนีจาก: " + EventsList.GetEventName(EventID);
+                    //    AdditionState = "ถูกจับ! ในระดับการไล่ล่า " + Heat + " %";
+
+
+                    //    eventTerminatedManually = FunctionStatus.CanCloseGame = false;
+
+                    //    /* Once the Race Finishes */
+                    //    _presence.Details = AdditionDetail;
+                    //    _presence.State = AdditionState;
+                    //    _presence.Assets = new Assets
+                    //    {
+                    //        LargeImageText = PersonaName + " - Level: " + PersonaLevel,
+                    //        LargeImageKey = PersonaAvatarId,
+                    //        SmallImageText = EventsList.GetEventTypeString(EventsList.GetEventType(EventID)),
+                    //        SmallImageKey = EventsList.GetEventType(EventID)
+                    //    };
+                    //    _presence.Buttons = DiscordLauncherPresence.ButtonsList.ToArray();
+
+                    //    AntiCheat.DisableChecks(true);
+                    //    if (DiscordLauncherPresence.Running()) DiscordLauncherPresence.Client.SetPresence(_presence);
+                    //}
+
+                    AdditionDetail = "ถูกจับ! ล้มเหลวในการหนีจากเขต";
+                    AdditionState = EventsList.GetEventName(EventID);
+
 
                     eventTerminatedManually = FunctionStatus.CanCloseGame = false;
 
