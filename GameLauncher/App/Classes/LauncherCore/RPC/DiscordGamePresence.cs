@@ -104,7 +104,7 @@ namespace GameLauncher.App.Classes.LauncherCore.RPC
                     {
                         DiscordLauncherPresence.ButtonsList.Add(new DiscordButton()
                         {
-                            Label = "Website",
+                            Label = "เว็ปไซต์",
                             Url = _serverWebsiteLink
                         });
 
@@ -115,7 +115,7 @@ namespace GameLauncher.App.Classes.LauncherCore.RPC
                     {
                         DiscordLauncherPresence.ButtonsList.Add(new DiscordButton()
                         {
-                            Label = "Discord",
+                            Label = "discord.gg/XCCx7mW6Za",
                             Url = _serverDiscordLink
                         });
 

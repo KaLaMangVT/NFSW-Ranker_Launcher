@@ -63,13 +63,13 @@ namespace GameLauncher.App.Classes.LauncherCore.RPC
                 ButtonsList.Clear();
                 ButtonsList.Add(new DiscordButton()
                 {
-                    Label = "Project Site",
-                    Url = "https://soapboxrace.world"
+                    Label = "เว็ปไซต์",
+                    Url = "http://kalamangworld.servegame.com"
                 });
                 ButtonsList.Add(new DiscordButton()
                 {
-                    Label = "Launcher Patch Notes",
-                    Url = "https://github.com/SoapboxRaceWorld/GameLauncher_NFSW/releases/tag/" + Theming.PrivacyRPCBuild
+                    Label = "discord.gg/XCCx7mW6Za",
+                    Url = "https://discord.gg/XCCx7mW6Za"
                 });
                 Presence.Buttons = ButtonsList.ToArray();
 
@@ -348,7 +348,7 @@ namespace GameLauncher.App.Classes.LauncherCore.RPC
                             {
                                 ButtonsList.Add(new DiscordButton()
                                 {
-                                    Label = "Website",
+                                    Label = "เว็ปไซต์",
                                     Url = InformationCache.SelectedServerJSON.homePageUrl
                                 });
                             }
@@ -357,8 +357,8 @@ namespace GameLauncher.App.Classes.LauncherCore.RPC
                             {
                                 ButtonsList.Add(new DiscordButton()
                                 {
-                                    Label = "Discord",
-                                    Url = InformationCache.SelectedServerJSON.discordUrl
+                                    Label = "discord.gg/XCCx7mW6Za",
+                                    Url = "https://discord.gg/XCCx7mW6Za"
                                 });
                             }
                         }
