@@ -76,7 +76,7 @@ namespace GameLauncher.App.Classes.LauncherCore.RPC
                 if (State == "Start Up")
                 {
                     Presence.State = Status;
-                    Presence.Details = "เตรียมตัวเข้าเกม: " + Theming.PrivacyRPCBuild;
+                    Presence.Details = "เปิดลอนเชอร์";
                     Presence.Assets = new Assets
                     {
                         LargeImageText = "Launcher",
@@ -87,7 +87,7 @@ namespace GameLauncher.App.Classes.LauncherCore.RPC
                 {
                     Download = true;
                     Presence.State = Status;
-                    Presence.Details = "เตรียมตัวเข้าเกม: " + Theming.PrivacyRPCBuild;
+                    Presence.Details = "เปิดลอนเชอร์";
                     Presence.Assets = new Assets
                     {
                         LargeImageText = "Launcher",
@@ -101,7 +101,7 @@ namespace GameLauncher.App.Classes.LauncherCore.RPC
                 {
                     Download = true;
                     Presence.State = Status;
-                    Presence.Details = "เตรียมตัวเข้าเกม: " + Theming.PrivacyRPCBuild;
+                    Presence.Details = "เปิดลอนเชอร์";
                     Presence.Assets = new Assets
                     {
                         LargeImageText = "Launcher",
@@ -115,7 +115,7 @@ namespace GameLauncher.App.Classes.LauncherCore.RPC
                 {
                     Download = true;
                     Presence.State = "Game Download Error";
-                    Presence.Details = "เตรียมตัวเข้าเกม: " + Theming.PrivacyRPCBuild;
+                    Presence.Details = "เปิดลอนเชอร์";
                     Presence.Assets = new Assets
                     {
                         LargeImageText = "Launcher",
@@ -128,7 +128,7 @@ namespace GameLauncher.App.Classes.LauncherCore.RPC
                 else if (State == "Idle Ready")
                 {
                     Presence.State = "ดาวน์โหลดแพชเสร็จสิ้น";
-                    Presence.Details = "เตรียมตัวเข้าเกม: " + Theming.PrivacyRPCBuild;
+                    Presence.Details = "เปิดลอนเชอร์";
                     Presence.Assets = new Assets
                     {
                         LargeImageText = "Launcher",
@@ -141,7 +141,7 @@ namespace GameLauncher.App.Classes.LauncherCore.RPC
                 else if (State == "Checking ModNet")
                 {
                     Presence.State = "ตรวจสอบ ModNet";
-                    Presence.Details = "เตรียมตัวเข้าเกม: " + Theming.PrivacyRPCBuild;
+                    Presence.Details = "เปิดลอนเชอร์";
                     Presence.Assets = new Assets
                     {
                         LargeImageText = "Launcher",
@@ -154,7 +154,7 @@ namespace GameLauncher.App.Classes.LauncherCore.RPC
                 else if (State == "ModNet File Check Passed")
                 {
                     Presence.State = "ไฟล์ ModNet: " + Status;
-                    Presence.Details = "เตรียมตัวเข้าเกม: " + Theming.PrivacyRPCBuild;
+                    Presence.Details = "เปิดลอนเชอร์";
                     Presence.Assets = new Assets
                     {
                         LargeImageText = "Launcher",
@@ -167,7 +167,7 @@ namespace GameLauncher.App.Classes.LauncherCore.RPC
                 else if (State == "Download ModNet")
                 {
                     Presence.State = "กำลังดาวน์โหลด ModNet";
-                    Presence.Details = "เตรียมตัวเข้าเกม: " + Theming.PrivacyRPCBuild;
+                    Presence.Details = "เปิดลอนเชอร์";
                     Presence.Assets = new Assets
                     {
                         LargeImageText = "Launcher",
@@ -180,7 +180,7 @@ namespace GameLauncher.App.Classes.LauncherCore.RPC
                 else if (State == "Download ModNet Error")
                 {
                     Presence.State = "ขั้นตอนการดาวน์โหลด ModNet มีปัญหา";
-                    Presence.Details = "เตรียมตัวเข้าเกม: " + Theming.PrivacyRPCBuild;
+                    Presence.Details = "เปิดลอนเชอร์";
                     Presence.Assets = new Assets
                     {
                         LargeImageText = "Launcher",
@@ -193,7 +193,7 @@ namespace GameLauncher.App.Classes.LauncherCore.RPC
                 else if (State == "Download Server Mods")
                 {
                     Presence.State = "กำลังดาวน์โหลด Mod จากเซิร์ฟเวอร์";
-                    Presence.Details = "เตรียมตัวเข้าเกม: " + Theming.PrivacyRPCBuild;
+                    Presence.Details = "เปิดลอนเชอร์";
                     Presence.Assets = new Assets
                     {
                         LargeImageText = "Launcher",
@@ -221,7 +221,7 @@ namespace GameLauncher.App.Classes.LauncherCore.RPC
                 {
                     if (State == "Security Center")
                     {
-                        Presence.Details = "เตรียมตัวเข้าเกม: " + Theming.PrivacyRPCBuild;
+                        Presence.Details = "เปิดลอนเชอร์";
                         Presence.State = "ตั้งค่าศูนย์ความปลอดภัย";
                         Presence.Assets = new Assets
                         {
@@ -233,7 +233,7 @@ namespace GameLauncher.App.Classes.LauncherCore.RPC
                     }
                     else if (State == "Register")
                     {
-                        Presence.Details = "เตรียมตัวเข้าเกม: " + Theming.PrivacyRPCBuild;
+                        Presence.Details = "เปิดลอนเชอร์";
                         Presence.State = "กำลังสมัครเป็นนักแข่ง";
                         Presence.Assets = new Assets
                         {
@@ -245,7 +245,7 @@ namespace GameLauncher.App.Classes.LauncherCore.RPC
                     }
                     else if (State == "Settings")
                     {
-                        Presence.Details = "เตรียมตัวเข้าเกม: " + Theming.PrivacyRPCBuild;
+                        Presence.Details = "เปิดลอนเชอร์";
                         Presence.State = "ตั้งค่าเกม";
                         Presence.Assets = new Assets
                         {
