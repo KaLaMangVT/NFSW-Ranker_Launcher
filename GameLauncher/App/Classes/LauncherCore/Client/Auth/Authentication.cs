@@ -266,12 +266,12 @@ namespace GameLauncher.App.Classes.LauncherCore.Client.Auth
 
                                     if (msgBoxInfo == "SERVER FULL")
                                     {
-                                        MessageSuccess = string.Format(MessageServerWelcome + "Successfully registered on {0}. However, server is actually full, " +
-                                            "therefore you cannot play it right now.", Tokens.ServerName);
+                                        MessageSuccess = string.Format(MessageServerWelcome + "{0} ได้รับข้อมูลการสมัครสมาชิกเรียบร้อยแล้ว อย่างไรก็ตามขณะนี้มีผู้เล่นเป็นจำนวนมาก, " +
+                                            "ในขณะนี้คุณไม่สามารถเล่นได้ แต่ลองพยายามดูอีกครั้งนึง", Tokens.ServerName);
                                     }
                                     else
                                     {
-                                        MessageSuccess = string.Format(MessageServerWelcome + "Successfully registered on {0}. You can log in now.", Tokens.ServerName);
+                                        MessageSuccess = string.Format(MessageServerWelcome + "{0} ได้รับข้อมูลการสมัครสมาชิกเรียบร้อยแล้ว คุณสามารถเข้าสู่ระบบเพื่อเริ่มเล่นเกมได้ทันที", Tokens.ServerName);
                                     }
 
                                     Tokens.Success = MessageSuccess;

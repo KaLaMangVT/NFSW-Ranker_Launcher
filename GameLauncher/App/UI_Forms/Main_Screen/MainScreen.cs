@@ -511,7 +511,7 @@ namespace GameLauncher.App.UI_Forms.Main_Screen
                     TempEmailCache = MainEmail.Text;
                     MainEmail.Text = "EMAIL IS HIDDEN";
                 }
-                MessageBox.Show(null, "Please wait while the GameLauncher is still downloading the game files.", "GameLauncher", MessageBoxButtons.OK);
+                MessageBox.Show(null, "กรุณารอจนกว่าการดาวน์โหลดจะเสร็จสิ้น เมื่อดาวน์โหลดเรียบร้อยแล้ว จะสามารถเข้าเกมได้ทันที", "GameLauncher", MessageBoxButtons.OK);
                 if (!string.IsNullOrWhiteSpace(TempEmailCache))
                 {
                     MainEmail.Text = TempEmailCache;
