@@ -1538,6 +1538,11 @@ namespace GameLauncher.App.UI_Forms.Main_Screen
 
             nfswProcess.ProcessorAffinity = (IntPtr)processorAffinity;
 
+            // [Fix] Set title 
+            nfswProcess.WaitForInputIdle();
+            User32.SetWindowText(nfswProcess.MainWindowHandle, "NEED FOR SPEED RANKER");
+            // End
+
             AntiCheat.process_id = nfswProcess.Id;
             CloseBTN.SafeInvokeAction(() =>
             CloseBTN.Visible = false, this);
