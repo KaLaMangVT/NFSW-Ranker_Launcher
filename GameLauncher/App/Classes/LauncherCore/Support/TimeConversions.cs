@@ -48,7 +48,7 @@ namespace GameLauncher.App.Classes.LauncherCore.Support
                 if (rMinutes > 1) return rMinutes.ToString() + " นาที";
                 if (rSeconds > 1) return rSeconds.ToString() + " วินาที";
 
-                return "Just now";
+                return "พร้อมแล้วในตอนนี้";
             }
             catch (Exception Error)
             {

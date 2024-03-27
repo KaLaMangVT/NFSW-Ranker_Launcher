@@ -115,7 +115,7 @@ namespace GameLauncher.App.Classes.LauncherCore.RPC
                     {
                         DiscordLauncherPresence.ButtonsList.Add(new DiscordButton()
                         {
-                            Label = "discord.gg/XCCx7mW6Za",
+                            Label = "ดิสคอร์ด",
                             Url = _serverDiscordLink
                         });
 

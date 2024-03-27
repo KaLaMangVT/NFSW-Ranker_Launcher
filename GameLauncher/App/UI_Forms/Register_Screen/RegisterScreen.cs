@@ -195,7 +195,7 @@ namespace GameLauncher.App.UI_Forms.Register_Screen
                             var splitChecks = hash.Split(':');
                             if (splitChecks[0] == verify)
                             {
-                                var passwordCheckReply = MessageBox.Show(null, "รหัสผ่านที่ใช้ลงทะเบียนนี้ " + Convert.ToInt32(splitChecks[1]) +
+                                var passwordCheckReply = MessageBox.Show(null, "รหัสผ่านที่ใช้ลงทะเบียนนี้ " +
                                     " อาจจะมีปัญหาในด้านความปลอดภัย\n\nแนะนำให้เลือกใช้รหัสผ่านอื่นแทนรหัสที่ใช้อยู่ปัจจุบัน" +
                                     "\nคุณยังต้องการที่จะใช้รหัสผ่านนี้อยู่หรือไม่?", "GameLauncher", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                                 if (passwordCheckReply == DialogResult.Yes)

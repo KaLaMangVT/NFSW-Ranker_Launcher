@@ -68,7 +68,7 @@ namespace GameLauncher.App.Classes.LauncherCore.RPC
                 });
                 ButtonsList.Add(new DiscordButton()
                 {
-                    Label = "discord.gg/XCCx7mW6Za",
+                    Label = "ดิสคอร์ด",
                     Url = "https://discord.gg/XCCx7mW6Za"
                 });
                 Presence.Buttons = ButtonsList.ToArray();
@@ -357,7 +357,7 @@ namespace GameLauncher.App.Classes.LauncherCore.RPC
                             {
                                 ButtonsList.Add(new DiscordButton()
                                 {
-                                    Label = "discord.gg/XCCx7mW6Za",
+                                    Label = "ดิสคอร์ด",
                                     Url = "https://discord.gg/XCCx7mW6Za"
                                 });
                             }
